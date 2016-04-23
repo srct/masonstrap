@@ -20,7 +20,9 @@ If you would like to make changes to values or behaviors in Masonstrap you will 
 
 Ensure node.js is installed:
 
-`$ sudo apt-get install npm`
+On Ubuntu: `$ sudo apt-get install npm`
+On OS X, make sure you have [Homebrew](http://brew.sh) then `$ brew install node`
+On Windows, download it [here](https://nodejs.org/en/download/).
 
 and in the root directory of this project (bootswatch/) run:
 
