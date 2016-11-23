@@ -1,2 +1,2 @@
-exclude: ["src", "node_modules", "bower.json", "bower_components/font-awesome/src", "composer.json", "package.json", "README.md", "Gruntfile.js"]
+exclude: ["src", "node_modules", "bower.json", "bower_components/font-awesome/src", package.json", "README.md", "Gruntfile.js"]
 include: ["_bootswatch.scss","_variables.scss"]

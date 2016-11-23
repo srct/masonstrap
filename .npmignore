@@ -7,6 +7,5 @@ _config.yml
 .bowerrc
 .gitignore
 bower.json
-composer.json
 Gruntfile.js
 */index.html
