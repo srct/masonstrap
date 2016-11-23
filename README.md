@@ -82,3 +82,7 @@ Copyright and License
 Copyright 2014 Thomas Park
 
 Code released under the MIT License.
+
+Icon
+------
+website by Stock Image Folio from the Noun Project
