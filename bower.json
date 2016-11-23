@@ -1,6 +1,6 @@
 {
-  "name": "masonstrap",
-  "description": "mason bootstrap theme",
+  "name": "Masonstrap",
+  "description": "Mason bootstrap theme",
   "author": "Mason SRCT",
   "homepage": "https://srct.gmu.edu",
   "repository": {
@@ -15,7 +15,6 @@
     "global",
     "_config.yml",
     ".gitignore",
-    "composer.json",
     "Gruntfile.js",
     "index.html",
     "package.json",
