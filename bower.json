@@ -1,0 +1,33 @@
+{
+  "name": "masonstrap",
+  "description": "mason bootstrap theme",
+  "author": "Mason SRCT",
+  "homepage": "https://srct.gmu.edu",
+  "repository": {
+    "type": "git",
+    "url": "git@git.gmu.edu:srct/masonstrap.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "api",
+    "assets",
+    "bower_components",
+    "global",
+    "_config.yml",
+    ".gitignore",
+    "composer.json",
+    "Gruntfile.js",
+    "index.html",
+    "package.json",
+    "*/index.html"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7"
+  },
+  "devDependencies": {
+    "bootstrap-sass-official": "~3.3.7",
+    "font-awesome": "~4.0.0",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2"
+  }
+}
