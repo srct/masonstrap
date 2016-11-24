@@ -2,8 +2,8 @@ image: node:4.2.6
 
 build_css:
     before_script:
-        - npm install
         - npm install grunt-cli
+        - npm install
     script:
         - grunt swatch:masonstrap
 
