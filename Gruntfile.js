@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         browsers: configBridge.config.autoprefixerBrowsers
       },
       dist: {
-        src: '*/bootstrap.css'
+        src: '*/masonstrap.css'
       }
     },
     watch: {
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
     var dist = {};
     concatSrc = 'global/build.less';
     concatDest = theme + '/build.less';
-    lessDest = '<%=builddir%>/' + theme + '/bootstrap.css';
+    lessDest = '<%=builddir%>/' + theme + '/masonstrap.css';
     lessSrc = [ theme + '/' + 'build.less' ];
 
     dist = {src: concatSrc, dest: concatDest};
@@ -114,7 +114,7 @@ module.exports = function (grunt) {
     grunt.config('less.dist.options.compress', false);
 
     grunt.task.run(['concat', 'less:dist', 'prefix:' + lessDest, 'clean:build',
-      compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
+      compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/masonstrap.min.css':'none']);
   });
 
 grunt.registerTask('build_scss', 'build a regular theme from scss', function(theme, compress) {
@@ -135,7 +135,7 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
     var dist = {};
     concatSrc = 'global/build.scss';
     concatDest = theme + '/build.scss';
-    scssDest = '<%=builddir%>/' + theme + '/bootstrap.css';
+    scssDest = '<%=builddir%>/' + theme + '/masonstrap.css';
     scssSrc = [theme + '/' + 'build.scss'];
 
     dist = {src: concatSrc, dest: concatDest};
@@ -148,7 +148,7 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
     grunt.config('sass.dist.options.unix-newlines', true);
 
     grunt.task.run(['concat', 'sass:dist', 'prefix:' + scssDest, 'clean:build',
-        compress ? 'compress_scss:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
+        compress ? 'compress_scss:' + scssDest + ':' + '<%=builddir%>/' + theme + 'masonstrap.min.css' : 'none']);
   });
 
   grunt.registerTask('prefix', 'autoprefix a generic css', function(fileSrc) {

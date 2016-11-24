@@ -8,5 +8,5 @@ build_css:
         - grunt swatch:masonstrap
     artifacts:
         paths:
-            - masonstrap/bootstrap.min.css
+            - masonstrap/masonstrap.min.css
 
