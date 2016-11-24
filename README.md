@@ -1,4 +1,4 @@
-# Masonstrap (GMU bootstrap theme)
+# Masonstrap (GMU bootstrap theme) [![build status](https://git.gmu.edu/srct/masonstrap/badges/master/build.svg)](https://git.gmu.edu/srct/masonstrap/commits/master)
 
 A project of [GMU SRCT](http://srct.gmu.edu).
 
