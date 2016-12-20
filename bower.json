@@ -1,32 +1,15 @@
 {
-  "name": "Masonstrap",
-  "description": "Easily provide any web project with Mason branding",
-  "author": "Mason SRCT",
-  "homepage": "https://srct.gmu.edu",
-  "repository": {
-    "type": "git",
-    "url": "git@git.gmu.edu:srct/masonstrap.git"
-  },
+  "name": "masonstrap",
+  "version": "3.3.6+1",
+  "authors": [
+    "David Haynes <dhaynes207@gmail.com>"
+  ],
   "license": "MIT",
   "ignore": [
-    "api",
-    "assets",
+    "**/.*",
+    "node_modules",
     "bower_components",
-    "global",
-    "_config.yml",
-    ".gitignore",
-    "Gruntfile.js",
-    "index.html",
-    "package.json",
-    "*/index.html"
-  ],
-  "dependencies": {
-    "bootstrap": "~3.3.7"
-  },
-  "devDependencies": {
-    "bootstrap-sass-official": "~3.3.7",
-    "font-awesome": "~4.0.0",
-    "html5shiv": "~3.7.0",
-    "respond": "~1.4.2"
-  }
+    "test",
+    "tests"
+  ]
 }
