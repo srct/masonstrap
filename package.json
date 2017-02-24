@@ -10,7 +10,7 @@
     "url": "https://git.gmu.edu/srct/masonstrap.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 6.10.0"
   },
   "devDependencies": {
     "bower": "~1.8.0",
