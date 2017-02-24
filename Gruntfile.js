@@ -253,5 +253,5 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
 
   grunt.registerTask('server', 'connect:keepalive');
 
-  grunt.registerTask('default', ['connect:base', 'watch']);
+  grunt.registerTask('default', ['swatch', 'connect:base', 'watch']);
 };
