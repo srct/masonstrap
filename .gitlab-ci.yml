@@ -4,7 +4,6 @@ build_css:
     before_script:
         - npm install
         - npm install -g grunt-cli
-        - gem install sass
     script:
         - grunt swatch
     artifacts:
