@@ -4,7 +4,7 @@ build_css:
     before_script:
         - npm install
         - npm install -g grunt-cli
-        - sudo apt-get install ruby-sass
+        - apt-get install ruby-sass
     script:
         - grunt swatch
     artifacts:
