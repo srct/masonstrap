@@ -3,6 +3,7 @@ image: node:7.6.0
 build_css:
     before_script:
         - npm install
+        - npm install bower
         - bower install
         - gem install sass
     script:
