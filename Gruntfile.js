@@ -17,7 +17,7 @@ module.exports = function (grunt) {
             ' * Homepage: <%= pkg.homepage %>\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license %>\n' +
-            ' * Based on Bootstrap\n' +
+            ' * Based on Bootstrap 4\n' +
             '*/\n',
     swatch: { masonstrap:{} },
     clean: {
