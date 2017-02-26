@@ -8,6 +8,7 @@ build_css:
         - apt-get update
         - apt-get install ruby-sass -y
         - bower install --allow-root
+        - sass --version
     script:
         - grunt swatch
     artifacts:
