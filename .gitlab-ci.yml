@@ -4,8 +4,10 @@ build_css:
     before_script:
         - npm install
         - npm install -g grunt-cli
+        - npm install -g bower
         - apt-get update
         - apt-get install ruby-sass -y
+        - bower install
     script:
         - grunt swatch
     artifacts:
