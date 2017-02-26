@@ -3,8 +3,10 @@ image: node:7.6.0
 build_css:
     before_script:
         - npm install
-        - npm install bower
+        - npm install -g grunt-cli
+        - npm install -g bower
         - bower install
+        - apt install ruby
         - gem install sass
     script:
         - grunt swatch
