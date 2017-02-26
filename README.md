@@ -1,5 +1,16 @@
 # Masonstrap (GMU bootstrap theme) [![build status](https://git.gmu.edu/srct/masonstrap/badges/master/build.svg)](https://git.gmu.edu/srct/masonstrap/commits/master)
 
+V4 INSTRUCTIONS
+
+- `npm install`
+- `bower install`
+- `sudo apt install ruby`
+- `sudu gem install sass`
+- `grunt swatch`
+- `grunt` - opens live preview site
+
+
+
 A project of [GMU SRCT](http://srct.gmu.edu).
 
 Masonstrap is a custom theme for bootstrap customized with GMU brand colors and
