@@ -6,7 +6,8 @@ build_css:
         - npm install -g grunt-cli
         - npm install -g bower
         - apt-get update
-        - apt-get install ruby-sass -y
+        - apt-get install ruby -y
+        - gem install sass
         - bower install --allow-root
         - sass --version
     script:
