@@ -10,7 +10,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     // Define some variables and options 
     pkg: grunt.file.readJSON('package.json'),
-    builddir: '.',
+    builddir: 'masonstrap/',
     buildtheme: '',
     banner: '/*!\n' +
             ' * <%= pkg.name %> v<%= pkg.version %>\n' +
@@ -19,7 +19,6 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license %>\n' +
             ' * Based on Bootstrap 4\n' +
             '*/\n',
-    swatch: { masonstrap:{} },
     clean: {
       build: {
         src: ['*/build.scss', '!assets/scss/build.scss']
@@ -35,17 +34,17 @@ module.exports = function (grunt) {
         dest: ''
       }
     },
-    exec: {
-      postcss: {
-        command: 'npm run postcss'
-      }
-    },
     watch: {
-      files: ['*/_variables.scss', '*/_bootswatch.scss', '*/index.html'],
+      files: ['*/_variables.scss', '*/_masonstrap.scss', '*/index.html'],
       tasks: 'build',
       options: {
         livereload: true,
         nospawn: true
+      }
+    },
+    exec: {
+      postcss: {
+        command: 'npm run postcss'
       }
     },
     connect: {
@@ -71,31 +70,19 @@ module.exports = function (grunt) {
   grunt.registerTask('none', function() {});
 
   // 
-  grunt.registerTask('build', 'build a regular theme from scss', function(theme, compress) {
-    theme = theme === undefined ? grunt.config('buildtheme') : theme;
+  grunt.registerTask('build', 'build masonstrap from scss', function(compress) {
     compress = compress === undefined ? true : compress;
 
-    var isValidTheme = grunt.file.exists(theme, '_variables.scss') && grunt.file.exists(theme, '_bootswatch.scss');
+    let concatSrc = 'assets/scss/build.scss';
+    let concatDest = 'masonstrap/build.scss';
+    let scssSrc  = 'masonstrap/build.scss';
+    let scssDest = '<%=builddir%>/masonstrap.css';
+    let dist = {src: concatSrc, dest: concatDest};    
+    
+    let files = {}; files[scssDest] = scssSrc;
 
-     // cancel the build (without failing) if this directory is not a valid theme
-    if (!isValidTheme) {
-      return;
-    }
-    var concatSrc;
-    var concatDest;
-    var scssDest;
-    var scssSrc;
-    var files = {};
-    var dist = {};
-    concatSrc = 'assets/scss/build.scss';
-    concatDest = theme + '/build.scss';
-    scssDest = '<%=builddir%>/' + theme + '/bootstrap.css';
-    scssSrc = [theme + '/' + 'build.scss'];
-
-    dist = {src: concatSrc, dest: concatDest};
+    // Set configs
     grunt.config('concat.dist', dist);
-    files = {};
-    files[scssDest] = scssSrc;
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.style', 'expanded');
     grunt.config('sass.dist.options.sourcemap', 'none');
@@ -104,7 +91,7 @@ module.exports = function (grunt) {
     
     //
     grunt.task.run(['concat', 'sass:dist', 'exec:postcss', 'clean:build',
-      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
+      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/masonstrap.min.css' : 'none']);
   });
 
   //
@@ -114,29 +101,12 @@ module.exports = function (grunt) {
 
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.style', 'compressed');
+
     grunt.task.run(['sass:dist']);
   });
 
-  grunt.registerMultiTask('swatch', 'build a theme', function() {
-    var t = this.target;
-    grunt.task.run('build:'+t);
-  });
-
-  grunt.registerTask('swatch', 'build a theme from scss ', function (theme) {
-    var t = theme;
-    if (!t) {
-      for (t in grunt.config('swatch')) {
-        grunt.task.run('build:' + t);
-      }
-    } else {
-      grunt.task.run('build:' + t);
-    }
-  });
-
   grunt.event.on('watch', function(action, filepath) {
-    var path = require('path');
-    var theme = path.dirname(filepath);
-    grunt.config('buildtheme', theme);
+    grunt.config('buildtheme', 'masonstrap');
   });
 
   grunt.registerTask('postcss', 'exec:postcss');
