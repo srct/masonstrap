@@ -12,10 +12,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
   font-weight: $headings-font-weight;
 }
 
+// Default Mason Green #006633
 .bg-primary {
 
   .dropdown-menu {
     background-color: $brand-primary;
+
+    top: 112%;
 
     .dropdown-item,
     .dropdown-item:focus {
@@ -31,6 +34,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
   }
 }
 
+// Some default color
 .bg-inverse {
   background-color: $gray !important;
 
@@ -47,25 +51,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     .dropdown-item:focus  {
       background-color: darken($gray, 5%);
       color: #fff;
-    }
-  }
-}
-
-.bg-faded {
-
-  .dropdown-menu {
-    background-color: $gray-lightest;
-
-    .dropdown-item,
-    .dropdown-item:focus {
-      color: $navbar-light-color;
-    }
-
-    .dropdown-item.active,
-    .dropdown-item:hover,
-    .dropdown-item:focus  {
-      background-color: lighten($gray-lightest, 5%);
-      color: $navbar-light-hover-color;
     }
   }
 }
