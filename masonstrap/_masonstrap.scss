@@ -10,6 +10,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 .navbar {
   font-size: $font-size-sm;
   font-weight: $headings-font-weight;
+
+  .dropdown-menu {
+    // Hack to fix the menu from sitting on top of the .navbar
+    top: 112%;
+  }
 }
 
 // Default Mason Green #006633
@@ -17,9 +22,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 
   .dropdown-menu {
     background-color: $brand-primary;
-
-    top: 112%;
-
+    
     .dropdown-item,
     .dropdown-item:focus {
       color: $navbar-inverse-color;
