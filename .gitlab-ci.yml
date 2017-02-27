@@ -11,7 +11,7 @@ build_css:
         - bower install --allow-root
         - sass --version
     script:
-        - grunt swatch
+        - grunt build
     artifacts:
         paths:
             - masonstrap/bootstrap.min.css
