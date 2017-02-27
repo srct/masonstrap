@@ -101,19 +101,19 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #222;
-$gray:                      #333;
-$gray-light:                #888;
-$gray-lighter:              #ccc;
-$gray-lightest:             #eee;
+$gray-dark:                 darken(#87908F, 20%);
+$gray:                      #87908F;
+$gray-light:                lighten(#87908F, 20%);
+$gray-lighter:              lighten(#87908F, 25%);;
+$gray-lightest:             lighten(#87908F, 30%);;
 
 // Reassign color vars to semantic color scheme
 $brand-primary:             #006633;
-$brand-success:             #43ac6a;
-$brand-info:                #5bc0de;
-$brand-warning:             #E99002;
-$brand-danger:              #F04124;
-$brand-inverse:             $gray-dark !default;
+$brand-secondary:           #FFCC33;
+$brand-success:             $brand-primary;
+$brand-info:                #007DC5;
+$brand-warning:             #F7941E;
+$brand-danger:              #AC1D37;
 
 
 // Options
