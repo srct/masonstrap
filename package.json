@@ -13,7 +13,7 @@
     "node": ">= 6.10.0"
   },
   "scripts": {
-    "postcss": "postcss --config assets/js/postcss.js --replace */bootstrap*.css"
+    "postcss": "postcss --config assets/js/postcss.js --replace */masonstrap*.css"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
