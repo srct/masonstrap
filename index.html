@@ -1,77 +1,85 @@
-
+<!-- HTML5 definition -->
 <!DOCTYPE html>
+
 <html lang="en">
+  
+  <!-- Header content -->
   <head>
+    <!-- Standard header content -->
     <meta charset="utf-8">
-    <title>Bootswatch: Yeti</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <!-- Chrome on Android navbar color -->
+    <meta name="theme-color" content="#006633">
+    
+    <!-- Title -->
+    <title>Masonstrap 4.0</title>
+
+    <!-- Load in static content -->
+    <link rel="icon" href="./assets/img/favicon.ico">
     <link rel="stylesheet" href="./masonstrap/masonstrap.css" media="screen">
-    <link rel="stylesheet" href="../assets/css/custom.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
   </head>
 
+  <!-- Body content -->
   <body>
+
+    <!-- Define the navbar with the primary background color -->
     <div class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <!-- 
+        Mobile buton toggle for the navbar (only displays in responsive mode) 
+      --> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" 
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Container used to center content on navbar -->
       <div class="container">
+
+        <!-- 
+          Div contains elements that get collapsed when responsive mode kicks in 
+        -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <a href="../" class="navbar-brand">Bootswatch</a>
+          <a class="navbar-brand" href="/">
+            <img src="/assets/img/SRCT_square.svg" width="24" height="24" alt="">&nbsp;&nbsp;Masonstrap
+          </a>
+          
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-              <div class="dropdown-menu" aria-labelledby="themes">
-                <a class="dropdown-item" href="../default/">Default</a>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Example Dropdown&nbsp;<span class="caret"></span></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Example Item 1</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../cerulean/">Cerulean</a>
-                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
-                <a class="dropdown-item" href="../cyborg/">Cyborg</a>
-                <a class="dropdown-item" href="../darkly/">Darkly</a>
-                <a class="dropdown-item" href="../flatly/">Flatly</a>
-                <a class="dropdown-item" href="../journal/">Journal</a>
-                <a class="dropdown-item" href="../litera/">Litera</a>
-                <a class="dropdown-item" href="../lumen/">Lumen</a>
-                <a class="dropdown-item" href="../lux/">Lux</a>
-                <a class="dropdown-item" href="../materia/">Materia</a>
-                <a class="dropdown-item" href="../minty/">Minty</a>
-                <a class="dropdown-item" href="../pulse/">Pulse</a>
-                <a class="dropdown-item" href="../sandstone/">Sandstone</a>
-                <a class="dropdown-item" href="../simplex/">Simplex</a>
-                <a class="dropdown-item" href="../slate/">Slate</a>
-                <a class="dropdown-item" href="../solar/">Solar</a>
-                <a class="dropdown-item" href="../spacelab/">Spacelab</a>
-                <a class="dropdown-item" href="../superhero/">Superhero</a>
-                <a class="dropdown-item" href="../united/">United</a>
-                <a class="dropdown-item" href="../yeti/">Yeti</a>
+                <a class="dropdown-item" href="#">Example Item 1</a>
+                <a class="dropdown-item" href="#">Example Item 2</a>
+                <a class="dropdown-item" href="#">Example Item 3</a>
+                <a class="dropdown-item" href="#">Example Item 4</a>
+                <a class="dropdown-item" href="#">Example Item 5</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../help/">Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://news.bootswatch.com">Blog</a>
+              <a class="nav-link" href="">Example nav-link</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Yeti <span class="caret"></span></a>
-              <div class="dropdown-menu" aria-labelledby="download">
-                <a class="dropdown-item" href="http://jsfiddle.net/bootswatch/vdr1vx77/">Open in JSFiddle</a>
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Masonstrap source files&nbsp;<span class="caret"></span></a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Open in JSFiddle</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="./bootstrap.min.css">bootstrap.min.css</a>
-                <a class="dropdown-item" href="./bootstrap.css">bootstrap.css</a>
+                <a class="dropdown-item" href="/masonstrap/masonstrap.min.css" target="_blank">masonstrap.min.css</a>
+                <a class="dropdown-item" href="/masonstrap/masonstrap.css" target="_blank">masonstrap.css</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="./_variables.scss">_variables.scss</a>
-                <a class="dropdown-item" href="./_bootswatch.scss">_bootswatch.scss</a>
+                <a class="dropdown-item" href="/masonstrap/_variables.scss" target="_blank">_variables.scss</a>
+                <a class="dropdown-item" href="/masonstrap/_masonstrap.scss" target="_blank">_masonstrap.scss</a>
               </div>
             </li>
           </ul>
 
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a>
+              <a class="nav-link" href="#">Right justified nav-item</a>
             </li>
           </ul>
 
@@ -85,8 +93,10 @@
       <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
-            <h1>Yeti</h1>
-            <p class="lead">A friendly foundation</p>
+            <h1>Masonstrap</h1>
+            <h4>4.0.0-alpha.6</h4>
+            <br />
+            <p class="lead">Easily provide any web project with Mason branding.</p>
           </div>
           <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="sponsor">
