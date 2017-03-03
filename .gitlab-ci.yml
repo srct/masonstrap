@@ -19,9 +19,10 @@ build_css:
 pages:
     stage: deploy
     script:
+    - bower install --allow-root
     - mkdir .public
     - cp index.html .public
-    - cp bower_components/bootstrap/dist/js/bootstrap.min.js .public/bootstrap/dist/js
+    - cp -r bower_components/bootstrap/dist/js .public
     - cp -r masonstrap .public
     - cp -r assets .public
     - mv .public public
