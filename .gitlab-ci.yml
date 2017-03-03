@@ -14,7 +14,7 @@ pages:
     stage: deploy
     script:
     - mkdir .public
-    - cp index.html masonstrap.min.css .public
+    - cp index.html masonstrap/masonstrap.min.css .public
     - mv .public public
     artifacts:
         paths:
