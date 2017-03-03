@@ -6,7 +6,6 @@ build_css:
         - npm install
     script:
         - grunt swatch:masonstrap
-        - cp masonstrap/masonstrap.min.css ../
     artifacts:
         paths:
             - masonstrap/masonstrap.min.css
