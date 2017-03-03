@@ -14,5 +14,5 @@ build_css:
         - grunt build
     artifacts:
         paths:
-            - masonstrap/bootstrap.min.css
+            - masonstrap/masonstrap.min.css
 
