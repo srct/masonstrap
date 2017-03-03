@@ -21,7 +21,7 @@ pages:
     script:
     - mkdir .public
     - cp index.html .public
-    - cp -r bower_components/bootstrap/dist/js .public
+    - cp bower_components/bootstrap/dist/js/bootstrap.min.js .public/bootstrap/dist/js
     - cp -r masonstrap .public
     - cp -r assets .public
     - mv .public public
