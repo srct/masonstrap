@@ -14,7 +14,7 @@ pages:
     stage: deploy
     script:
     - mkdir .public
-    - cp index.html masonstrap/masonstrap.min.css assets/css/custom.min.css .public
+    - cp index.html masonstrap/masonstrap.min.css assets/css/custom.min.css bower_components/bootstrap/dist/js/bootstrap.min.js assets/js/custom.js .public
     - mv .public public
     artifacts:
         paths:
