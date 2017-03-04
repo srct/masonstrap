@@ -14,9 +14,13 @@ build_css:
         - grunt build
         - mkdir .public
         - cp index.html .public
-        - cp -r bower_components/bootstrap/dist/js .public
-        - cp -r masonstrap .public
-        - cp -r assets .public
+        - cp -r ./bower_components/bootstrap/dist/js .public
+        - cp -r ./masonstrap .public
+        - cp -r ./assets .public
+        - ls -laF .public
+        - ls -laF .public/masonstrap
+        - ls -laF .public/assets
+        - ls -laF .public/bower_components/bootstrap/dist/js
         - mv .public public
     artifacts:
         paths:
