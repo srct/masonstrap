@@ -8,7 +8,7 @@
     <!-- Metatags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>    
     <!-- Chrome on Android navbar color -->
     <meta name="theme-color" content="#006633">
     <!-- Opengraph tags -->
@@ -44,28 +44,34 @@
     <!-- Define the navbar with the primary background color -->
     <div class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
       
-      <!-- 
+      <div class="navbar-header">
+          
+          <!-- Brand logo + name -->
+          <a class="navbar-brand" href="/">
+            <img src="/assets/img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top">&nbsp;&nbsp;Masonstrap
+          </a>
+
+                <!-- 
         Mobile buton toggle for the navbar (only displays in responsive mode) 
       --> 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+      <button class="navbar-toggler-right" type="button" data-toggle="collapse" 
         data-target="#navbarResponsive" aria-controls="navbarResponsive" 
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        aria-expanded="false" aria-label="Toggle navigation" style="
+    border-color: transparent;
+    background: transparent;"
+>
+        <span class="navbar-toggler-icon" style="
+    margin-top: 0.3em;
+"></span>
       </button>
 
-      <!-- Container used to center content on navbar -->
-      <div class="container">
+      </div> 
 
         <!-- 
           Div contains elements that get collapsed when responsive mode kicks in 
         -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          
-          <!-- Brand logo + name -->
-          <a class="navbar-brand" href="/">
-            <img src="/assets/img/SRCT_square.svg" width="24" height="24" alt="">&nbsp;&nbsp;Masonstrap
-          </a>
-          
+
           <!-- main navbar content (left side) -->
           <ul class="navbar-nav">
             
@@ -97,7 +103,6 @@
           </ul>
         </div>
       </div>
-    </div>
 
     <!-- Begin giant container for the entirety of the page content -->
     <div class="container">
@@ -811,7 +816,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <!--<div class="col-lg-6">
             <h2 id="pagination">Pagination</h2>
             <div class="bs-component">
               <div>
@@ -893,7 +898,7 @@
               </div>
 
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
 

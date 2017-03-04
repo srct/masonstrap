@@ -14,21 +14,3 @@ build_css:
     artifacts:
         paths:
             - masonstrap/masonstrap.min.css
-
-pages:
-    stage: deploy
-    script:
-    - npm install
-    - npm install -g grunt-cli
-    - npm install -g bower
-    - apt-get update
-    - apt-get install ruby -y
-    - gem install sass
-    - bower install --allow-root
-    - grunt build
-    - mkdir .public
-    - cp index.html ./masonstrap/masonstrap.min.css ./assets/css/custom.css ./bower_components/bootstrap/dist/js/bootstrap.min.js ./assets/js/custom.js .public
-    - mv .public public
-    artifacts:
-        paths:
-        - public
