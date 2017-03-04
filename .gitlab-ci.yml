@@ -1,6 +1,7 @@
 image: node:7.6.0
 
 build_css:
+    stage: deploy
     before_script:
         - npm install
         - npm install -g grunt-cli
@@ -9,24 +10,15 @@ build_css:
         - apt-get install ruby -y
         - gem install sass
         - bower install --allow-root
-        - sass --version
     script:
         - grunt build
+        - mkdir .public
+        - cp index.html .public
+        - cp -r bower_components/bootstrap/dist/js .public
+        - cp -r masonstrap .public
+        - cp -r assets .public
+        - mv .public public
     artifacts:
         paths:
+            - public 
             - masonstrap/masonstrap.min.css
-
-pages:
-    stage: deploy
-    script:
-    - npm install -g bower
-    - bower install --allow-root
-    - mkdir .public
-    - cp index.html .public
-    - cp -r bower_components/bootstrap/dist/js .public
-    - cp -r masonstrap .public
-    - cp -r assets .public
-    - mv .public public
-    artifacts:
-        paths:
-        - public
