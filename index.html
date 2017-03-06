@@ -1,10 +1,7 @@
 <!-- HTML5 definition -->
 <!DOCTYPE html>
-
 <html lang="en">
-
 <!-- Header content -->
-
 <head>
   <!-- Metatags -->
   <meta charset="utf-8">
@@ -40,23 +37,31 @@
 </head>
 
 <!-- Body content -->
-
 <body>
-
-  <!--non-collapse: container, collapse: no container-->
-
   <!-- Define the navbar with the primary background color -->
-  <nav class="navbar navbar-toggleable-sm navbar-inverse bg-primary">
-
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".dual-collapse">
+  <nav class="navbar navbar-toggleable-sm navbar-inverse bg-primary fixed-top">
+    
+    <!-- Responsive toggle button -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" 
+      data-toggle="collapse" data-target=".dual-collapse">
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Containter for main navbar content -->
     <div class="container">
-      <a class="navbar-brand d-flex mx-auto" href="#"><img src="/assets/img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top">&nbsp;&nbsp;Masonstrap&nbsp;&nbsp;</a>
       
+      <!-- Brand logo + title -->
+      <a class="navbar-brand d-flex mx-auto" href="#">
+        <img src="/assets/img/SRCT_square.svg" width="30" height="30" 
+          class="d-inline-block align-top">&nbsp;&nbsp;Masonstrap&nbsp;&nbsp;
+      </a>
+
+      <!-- Elements that will be collapsed in responsive mode -->
       <div class="navbar-collapse collapse dual-collapse">
+        
+        <!-- Unordered list of elements -->
         <ul class="navbar-nav mr-auto">
+          
           <!-- Example nav-item -->
           <li class="nav-item">
             <a class="nav-link" href="">Example nav-link</a>
@@ -64,37 +69,63 @@
 
           <!-- Example dropdown including links to source files -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Source files&nbsp;<span class="caret"></span></a>
+            
+            <!-- Dropdown for source files -->
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
+              id="download">Source files<span class="caret"></span>
+            </a>
+
+            <!-- Rounded dropdown-menu -->
             <div class="rounded dropdown-menu">
+
+              <!-- Example dropdown-item -->
               <a class="dropdown-item" href="#">Open in JSFiddle (TODO)</a>
+              
+              <!-- Divider divides content in the dropdown-menu -->
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/masonstrap/masonstrap.min.css" target="_blank">masonstrap.min.css</a>
-              <a class="dropdown-item" href="/masonstrap/masonstrap.css" target="_blank">masonstrap.css</a>
+              
+              <!-- Example dropdown-item -->
+              <a class="dropdown-item" href="/masonstrap/masonstrap.min.css" 
+                target="_blank">masonstrap.min.css
+              </a>
+              
+              <!-- Example dropdown-item -->
+              <a class="dropdown-item" href="/masonstrap/masonstrap.css" 
+                target="_blank">masonstrap.css
+              </a>
+
+              <!-- Divider divides content in the dropdown-menu -->
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/masonstrap/_variables.scss" target="_blank">_variables.scss</a>
-              <a class="dropdown-item" href="/masonstrap/_masonstrap.scss" target="_blank">_masonstrap.scss</a>
+
+              <!-- Example dropdown-item -->
+              <a class="dropdown-item" href="/masonstrap/_variables.scss" 
+                target="_blank">_variables.scss
+              </a>
+
+              <!-- Example dropdown-item -->              
+              <a class="dropdown-item" href="/masonstrap/_masonstrap.scss" 
+                target="_blank">_masonstrap.scss
+              </a>
             </div>
           </li>
         </ul>
 
+        <!-- Unordered list of elements, with margin-left: auto -->
         <ul class="navbar-nav ml-auto">
+
+          <!-- Example nav-item -->
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
+
+          <!-- Example nav-item -->
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
-
       </div>
-
-      <!--<a class="navbar-brand d-flex mx-auto" href="#"><img src="/assets/img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top">&nbsp;&nbsp;Masonstrap</a>-->
-
     </div>
-
   </nav>
-
-<br></br>
 
   <!-- Begin giant container for the entirety of the page content -->
   <div class="container">
@@ -137,7 +168,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="navbars">Navbars<hr /></h1>
+            <h1 id="navbars">Navbars
+              <hr />
+            </h1>
           </div>
 
           <div class="bs-component">
@@ -213,7 +246,9 @@
       <div class="page-header">
         <div class="row">
           <div class="col-lg-12">
-            <h1 id="buttons">Buttons<hr /></h1>
+            <h1 id="buttons">Buttons
+              <hr />
+            </h1>
           </div>
         </div>
       </div>
@@ -389,7 +424,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="typography">Typography<hr /></h1>
+            <h1 id="typography">Typography
+              <hr />
+            </h1>
           </div>
         </div>
       </div>
@@ -472,7 +509,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="tables">Tables<hr /></h1>
+            <h1 id="tables">Tables
+              <hr />
+            </h1>
           </div>
 
           <div class="bs-component">
@@ -542,7 +581,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="forms">Forms<hr /></h1>
+            <h1 id="forms">Forms
+              <hr />
+            </h1>
           </div>
         </div>
       </div>
@@ -698,7 +739,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="navs">Navs<hr /></h1>
+            <h1 id="navs">Navs
+              <hr />
+            </h1>
           </div>
         </div>
       </div>
@@ -921,7 +964,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="indicators">Indicators<hr /></h1>
+            <h1 id="indicators">Indicators
+              <hr />
+            </h1>
           </div>
         </div>
       </div>
@@ -994,7 +1039,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="progress">Progress<hr /></h1>
+            <h1 id="progress">Progress
+              <hr />
+            </h1>
           </div>
 
           <h3 id="progress-basic">Basic</h3>
@@ -1071,7 +1118,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="containers">Containers<hr /></h1>
+            <h1 id="containers">Containers
+              <hr />
+            </h1>
           </div>
           <div class="bs-component">
             <div class="jumbotron">
@@ -1266,7 +1315,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
-            <h1 id="dialogs">Dialogs<hr /></h1>
+            <h1 id="dialogs">Dialogs
+              <hr />
+            </h1>
           </div>
         </div>
       </div>
