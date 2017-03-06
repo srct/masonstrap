@@ -1,7 +1,3 @@
-body {
-    padding-top: 120px
-}
-
 body>.navbar {
     -webkit-transition: background-color .3s ease-in;
     transition: background-color .3s ease-in
