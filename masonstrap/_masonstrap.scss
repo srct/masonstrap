@@ -53,6 +53,26 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
   }
 }
 
+.bg-classic {
+  background-color: $bg-classic !important;
+
+  .dropdown-menu {
+    background-color: $gray;
+
+    .dropdown-item,
+    .dropdown-item:focus {
+      color: $navbar-inverse-color;
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:hover,
+    .dropdown-item:focus  {
+      background-color: darken($gray, 5%);
+      color: #fff;
+    }
+  }
+}
+
 // Buttons =====================================================================
 
 .btn-group {
