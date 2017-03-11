@@ -216,10 +216,15 @@ label,
 }
 
 .nav-tabs {
-  .nav-link,
+  
+  .nav-link {
+    color: $bg-classic;
+  }
+  
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
+    color: $nav-tabs-border-color;
     border-color: $nav-tabs-border-color;
     background-color: $gray-lightest;
   }
