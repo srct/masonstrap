@@ -1,3 +1,139 @@
-<h1>Hello World!</h1>
+<!-- HTML5 definition -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header content -->
 
-Check out the <a href="demo.html">Demo</a>!
+  <head>
+    <!-- Metatags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Chrome on Android navbar color -->
+    <meta name="theme-color" content="#006633">
+    <!-- Opengraph tags -->
+    <meta property="og:url" content="http://srct.gmu.io/masonstrap/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SRCT Masonstrap">
+    <!--<meta property="og:image" content="http://srct.gmu.io/masonstrap/assets/img/masonstrap.png">-->
+    <meta property="og:description" content="Easily provide any web project with Mason branding.">
+    <meta property="og:site_name" content="SRCT Masonstrap">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="SRCT">
+    <!-- Twitter card tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@MasonSRCT">
+    <meta name="twitter:creator" content="@MasonSRCT">
+    <meta name="twitter:url" content="http://srct.gmu.io/masonstrap/">
+    <meta name="twitter:title" content="SRCT Masonstrap">
+    <meta name="twitter:description" content="Easily provide any web project with Mason branding.">
+    <!--<meta name="twitter:image" content="http://srct.gmu.io/masonstrap/assets/img/masonstrap.png">-->
+
+    <!-- Title -->
+    <title>Masonstrap &bull; Home</title>
+
+    <!-- Load in static content -->
+    <link rel="icon" href="assets/img/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="masonstrap/masonstrap.css" media="screen">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <!-- Body content -->
+
+  <body>
+    <!-- Define the navbar with the primary background color -->
+    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-primary fixed-top">
+
+      <!-- Responsive toggle button -->
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target=".dual-collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <!-- Containter for main navbar content -->
+      <div class="container">
+
+        <!-- Brand logo + title -->
+        <a class="navbar-brand d-flex mx-auto" href="#">
+          <img src="assets/img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top">&nbsp;&nbsp;Masonstrap&nbsp;&nbsp;
+        </a>
+
+        <!-- Elements that will be collapsed in responsive mode -->
+        <div class="navbar-collapse collapse dual-collapse">
+
+          <!-- Unordered list of elements -->
+          <ul class="navbar-nav mr-auto">
+
+            <!-- Example dropdown including links to source files -->
+            <li class="nav-item dropdown">
+
+              <!-- Dropdown for source files -->
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">Source files<span class="caret"></span>
+            </a>
+
+              <!-- Rounded dropdown-menu -->
+              <div class="rounded dropdown-menu">
+
+                <!-- Example dropdown-item -->
+                <a class="dropdown-item" href="#">Open in JSFiddle (TODO)</a>
+
+                <!-- Divider divides content in the dropdown-menu -->
+                <div class="dropdown-divider"></div>
+
+                <!-- Example dropdown-item -->
+                <a class="dropdown-item" href="/masonstrap/masonstrap.min.css" target="_blank">masonstrap.min.css
+              </a>
+
+                <!-- Example dropdown-item -->
+                <a class="dropdown-item" href="/masonstrap/masonstrap.css" target="_blank">masonstrap.css
+              </a>
+
+                <!-- Divider divides content in the dropdown-menu -->
+                <div class="dropdown-divider"></div>
+
+                <!-- Example dropdown-item -->
+                <a class="dropdown-item" href="/masonstrap/_variables.scss" target="_blank">_variables.scss
+              </a>
+
+                <!-- Example dropdown-item -->
+                <a class="dropdown-item" href="/masonstrap/_masonstrap.scss" target="_blank">_masonstrap.scss
+              </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Begin giant container for the entirety of the page content -->
+    <div class="container">
+        <div class="rounded jumbotron" style="background-color: rgba(214, 218, 217, 0.95);">
+            <h1 class="display-4">        
+                <span class="fa-stack fa-md hidden-sm-down">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                    </span> Masonstrap</h1>
+            <p class="lead hidden-sm-down" style="padding-left: 6.5em;">Easily provide any web project with Mason branding.</p>
+            <p class="lead hidden-md-up">Easily provide any web project with Mason branding.</p>
+            <hr />
+            <div class="row">
+                <p style="padding-left: 1rem;"><a class="rounded btn btn-outline-primary btn-lg" href="demo.html" target="_blank">Demo</a></p>
+                <p style="padding-left: 1rem;"><a class="rounded btn btn-outline-info btn-lg" href="https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build_css">Download</a></p>
+            </div>
+            <br />
+                <p>A project of <a href="https://srct.gmu.edu/">GMU<strong> SRCT</strong></a></p>
+                <p>Code released under <a href="https://git.gmu.edu/srct/masonstrap/blob/master/LICENSE"><strong>MIT license</strong></a></p>
+                <p>Contribute to the open source repo at <a href="https://git.gmu.edu/srct/masonstrap"><strong>git.gmu.edu/srct/masonstrap</strong></a></p>
+                <p>Based on the <a href="https://bootswatch.com/yeti/"><strong>Bootswatch</strong> Yeti</a> theme which is based on <a href="https://getbootstrap.com/"><strong>Bootstrap</strong></a></p>
+
+        </div>
+    </div>
+
+    <!-- load in external js -->
+    <script src="bower_components/jquery/dist/jquery.slim.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
