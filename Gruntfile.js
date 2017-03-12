@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/_variables.scss', '*/_masonstrap.scss', 'index.html'],
+      files: ['*/_variables.scss', '*/_masonstrap.scss', 'index.html', 'demo.html'],
       tasks: 'build',
       options: {
         livereload: true,
