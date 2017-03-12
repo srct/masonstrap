@@ -1,5 +1,5 @@
 {
-  "name": "Masonstrap",
+  "name": "masonstrap",
   "description": "Easily provide any web project with Mason branding",
   "author": "Mason SRCT",
   "homepage": "https://srct.gmu.edu",
@@ -22,8 +22,5 @@
   ],
   "dependencies": {
     "bootstrap": "~4.0.0"
-  },
-  "devDependencies": {
-    "font-awesome": "~4.7.0"
   }
 }
