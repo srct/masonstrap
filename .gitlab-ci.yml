@@ -16,19 +16,20 @@ build_css:
             - masonstrap/masonstrap.min.css
 
 pages:
-    - npm install
-    - npm install -g grunt-cli
-    - npm install -g bower
-    - apt-get update
-    - apt-get install ruby -y
-    - gem install sass
-    - bower install --allow-root
-    - grunt build
-    - mkdir .public
-    - cp index.html demo.html .public
-    - cp -r assets .public
-    - cp -r bower_components .public
-    - mv .public public
+    script:
+        - npm install
+        - npm install -g grunt-cli
+        - npm install -g bower
+        - apt-get update
+        - apt-get install ruby -y
+        - gem install sass
+        - bower install --allow-root
+        - grunt build
+        - mkdir .public
+        - cp index.html demo.html .public
+        - cp -r assets .public
+        - cp -r bower_components .public
+        - mv .public public
     artifacts:
         paths:
             - public
