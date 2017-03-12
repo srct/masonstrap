@@ -2,11 +2,10 @@
 
 A project of [GMU SRCT](http://srct.gmu.edu).
 
-Masonstrap is a custom theme for bootstrap customized with GMU brand colors and
+Masonstrap is a theme for bootstrap customized with GMU brand colors and
 elements. It aims to easily provide any web project with Mason branding.
 
-## Enabling Masonstrap for Your Project
-<legend></legend>
+# Adding Masonstrap to your project
 
 This repo contains all of the necessary components to build and modify masonstrap
 on your local machine. If you'd like just `masonstrap.min.css` head over to our
@@ -14,57 +13,63 @@ on your local machine. If you'd like just `masonstrap.min.css` head over to our
 latest build of the css.
 
 Additionally this link should grab you the latest css build:
-https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build_css
+
+[https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build_css]()
 
 Masonstrap bundles bootstrap 3.7 and normalize.css for you.
 
 
-## Building Masonstrap
-<legend></legend>
+# Building Masonstrap
 
 If you would like to make changes to values or behaviors in Masonstrap you will
 need to do some quick setup.
 
 1. Ensure node.js is installed:
 
-    On Ubuntu: `$ sudo apt-get install npm`
+    On Ubuntu: 
+        
+        sudo apt update
+        sudo apt install nodejs
+        sudo apt install npm
 
-    On macOS, make sure you have [Homebrew](http://brew.sh) then `$ brew install node`
+    On macOS: 
+    
+    1. make sure you have [Homebrew](http://brew.sh)
+    2. `brew install node`
 
     On Windows, download it [here](https://nodejs.org/en/download/).
 
-2. In the root directory of this project run:
+2. You will also need Sass which is distributed as a ruby gem:
 
-    `$ npm install`
+    On Ubuntu:
 
-3. You will also need to have Grunt installed globally on your system:
+        sudo apt update
+        sudo apt install ruby
+        sudo gem install sass
 
-    `$ npm install -g grunt-cli`
+3. In the root directory of this project run:
+
+        npm install
+        bower install
 
 4. Finally, run:
 
-    `$ grunt swatch:masonstrap` to build masonstrap.css and masonstrap.min.css.
+        grunt build
 
-### Stylesheet test webpage
+    to build the css files (`masonstrap.css` and `masonstrap.min.css`) in the `masonstrap/` directory.
 
-Run:
+# Local development
 
-`grunt`
+If you would like to run the demo site on your local machine run:
 
-to spin up a local server at [http://0.0.0.0:3000](http://0.0.0.0:3000) that
-will host a test webpage displaying all of the masonstrap elements styled with
-your locally built css files. It will also rebuild masonstrap when it detects
-that changes have been made and livereload the page for you.
+    grunt
+
+This will spin up a local server at [127.0.0.1:3000]().
+
+Any changes made to the `.scss` or `.html` files will trigger a rebuild of the css and livereload of the site. 
 
 ## Making changes to Masonstrap
 
-Masonstrap consists of two LESS files. `variables.less`, which is included by
+Masonstrap consists of two Sass files. `_variables.scss`, which is included by
 default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables).
-`bootswatch.less` introduces more extensive structural changes.
-
-These files are also available in SASS.
-
-
-Icon
-------
-website by Stock Image Folio from the Noun Project
+`_masonstrap.scss` introduces more extensive structural changes.

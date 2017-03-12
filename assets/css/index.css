@@ -1,0 +1,14 @@
+html { 
+  background: url(../img/expl.jpg) no-repeat center fixed; 
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+}
+
+body {
+  background: transparent !important;
+}
+

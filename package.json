@@ -1,7 +1,7 @@
 {
-  "name": "Masonstrap",
+  "name": "masonstrap",
   "description": "Easily provide any web project with Mason branding",
-  "version": "3.3.7",
+  "version": "4.0.0-alpha.6",
   "author": "Mason SRCT",
   "homepage": "srct.gmu.edu",
   "license": "MIT",
@@ -10,17 +10,23 @@
     "url": "https://git.gmu.edu/srct/masonstrap.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 6.10.0"
+  },
+  "scripts": {
+    "postcss": "postcss --config assets/js/postcss.js --replace */masonstrap*.css"
   },
   "devDependencies": {
-    "bower": "~1.2.8",
-    "grunt": "~0.4.2",
-    "grunt-autoprefixer": "~1.0.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-connect": "~0.8.0",
-    "grunt-contrib-less": "~0.9.0",
-    "grunt-contrib-sass": "~0.7.4",
-    "grunt-contrib-watch": "~0.5.1"
+    "autoprefixer": "^6.5.0",
+    "bower": "^1.2.8",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexbugs-fixes": "^2.0.0"
   }
 }
