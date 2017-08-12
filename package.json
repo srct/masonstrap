@@ -17,10 +17,10 @@
     "stylelint-config-standard": "^17.0.0"
   },
   "scripts": {
-    "sass-lint": "stylelint masonstrap/*.scss --syntax scss",
-    "sass-compile": "sass masonstrap/masonstrap.scss build/masonstrap.css",
-    "sass-prefix": "npx postcss build/masonstrap.css --use autoprefixer -d build/",
-    "sass-minify": "cleancss --source-map --source-map-inline-sources -o build/masonstrap.min.css build/masonstrap.css",
+    "sass-lint": "stylelint ./masonstrap/*.scss --syntax scss",
+    "sass-compile": "sass ./masonstrap/masonstrap.scss ./masonstrap/masonstrap.css",
+    "sass-prefix": "npx postcss masonstrap/masonstrap.css --use autoprefixer -d ./masonstrap/",
+    "sass-minify": "cleancss --source-map --source-map-inline-sources -o masonstrap/masonstrap.min.css masonstrap/masonstrap.css",
     "build-masonstrap": "npm-run-all sass-lint sass-compile sass-prefix sass-minify"
   }
 }

@@ -17,6 +17,7 @@ Session.vim
 tags
 masonstrap/*.css
 masonstrap/*.min.css
+masonstrap/*.map
 .idea
 components
 node_modules
