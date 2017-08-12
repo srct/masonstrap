@@ -3,7 +3,6 @@ components
 node_modules
 build
 _site
-*.lock
 .sass-cache/
 # swap
 [._]*.s[a-w][a-z]
@@ -23,7 +22,6 @@ components
 node_modules
 build
 _site
-*.lock
 .sass-cache/
 bower_components
 .vscode
