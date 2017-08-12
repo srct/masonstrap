@@ -10,6 +10,7 @@
     "bootstrap": "4.0.0-beta",
     "clean-css-cli": "^4.1.6",
     "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
     "popper.js": "^1.11.1",
     "postcss-cli": "^4.1.0",
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "sass-lint": "stylelint ./masonstrap/*.scss --syntax scss",
-    "sass-compile": "sass ./masonstrap/masonstrap.scss ./masonstrap/masonstrap.css",
+    "sass-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 ./masonstrap/masonstrap.scss ./masonstrap/masonstrap.css",
     "sass-prefix": "npx postcss masonstrap/masonstrap.css --use autoprefixer -d ./masonstrap/",
     "sass-minify": "cleancss --source-map --source-map-inline-sources -o masonstrap/masonstrap.min.css masonstrap/masonstrap.css",
     "build-masonstrap": "npm-run-all sass-lint sass-compile sass-prefix sass-minify"
