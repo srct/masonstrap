@@ -4,8 +4,8 @@ build:
   stage: build
   script:
     - apt-get update
-    - apt-get install software-properties-common python-software-properties
-    - add-apt-repository ppa:tista/build
+    - apt-get install software-properties-common python-software-properties -y
+    - add-apt-repository ppa:tista/build -y
     - apt-get update
     - apt-get install libsass -y 
     - yarn
