@@ -1,6 +1,6 @@
 {
   "name": "masonstrap",
-  "version": "4.0",
+  "version": "4.0.0",
   "description": "Easily style any web project with Mason branding",
   "main": "index.js",
   "repository": "git@git.gmu.edu:srct/masonstrap.git",
@@ -10,7 +10,13 @@
     "autoprefixer": "^7.1.2",
     "bootstrap": "4.0.0-beta",
     "jquery": "^3.2.1",
+    "npm-run-all": "^4.0.2",
     "popper.js": "^1.11.1",
     "postcss-cli": "^4.1.0"
+  },
+  "scripts": {
+    "sass-compile": "sass masonstrap/masonstrap.scss build/masonstrap.css",
+    "autoprefix": "npx postcss build/masonstrap.css --use autoprefixer -d build/",
+    "build-masonstrap": "npm-run-all sass-compile autoprefix"
   }
 }
