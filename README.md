@@ -30,8 +30,8 @@ need to do some quick setup.
         sudo npm install -g yarn
         yarn
 
-## Local development
+3. Build the stylesheets:
 
-    sass masonstrap/masonstrap.scss build/masonstrap.css
-    npx postcss build/masonstrap.css --use autoprefixer -d build/
+        npm run build-masonstrap
 
+    `masonstrap.css`, `masonstrap.min.css`, and a source map for masonstrap will be output to `./masonstrap/`.
