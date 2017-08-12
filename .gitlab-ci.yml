@@ -3,6 +3,8 @@ image: node:latest
 build:
   stage: build
   script:
+    - apt update
+    - apt install libsass -y 
     - yarn
     - npm run build-masonstrap
   artifacts:
