@@ -3,8 +3,11 @@ image: node:latest
 build:
   stage: build
   script:
-    - apt update
-    - apt install libsass -y 
+    - apt-get update
+    - apt-get install software-properties-common python-software-properties
+    - add-apt-repository ppa:tista/build
+    - apt-get update
+    - apt-get install libsass -y 
     - yarn
     - npm run build-masonstrap
   artifacts:
