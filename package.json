@@ -2,7 +2,6 @@
   "name": "masonstrap",
   "version": "4.0.0",
   "description": "Easily style any web project with Mason branding",
-  "main": "index.js",
   "repository": "git@git.gmu.edu:srct/masonstrap.git",
   "author": "Mason SRCT",
   "license": "MIT",
@@ -12,11 +11,14 @@
     "jquery": "^3.2.1",
     "npm-run-all": "^4.0.2",
     "popper.js": "^1.11.1",
-    "postcss-cli": "^4.1.0"
+    "postcss-cli": "^4.1.0",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0"
   },
   "scripts": {
+    "sass-lint": "stylelint masonstrap/*.scss --syntax scss",
     "sass-compile": "sass masonstrap/masonstrap.scss build/masonstrap.css",
     "autoprefix": "npx postcss build/masonstrap.css --use autoprefixer -d build/",
-    "build-masonstrap": "npm-run-all sass-compile autoprefix"
+    "build-masonstrap": "npm-run-all sass-lint sass-compile autoprefix"
   }
 }
