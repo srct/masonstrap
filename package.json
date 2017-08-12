@@ -7,8 +7,10 @@
   "author": "Mason SRCT",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^7.1.2",
     "bootstrap": "4.0.0-beta",
     "jquery": "^3.2.1",
-    "popper.js": "^1.11.1"
+    "popper.js": "^1.11.1",
+    "postcss-cli": "^4.1.0"
   }
 }

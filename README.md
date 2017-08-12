@@ -32,8 +32,6 @@ need to do some quick setup.
 
 ## Local development
 
-TODO
+    sass masonstrap/masonstrap.scss build/masonstrap.css
+    npx postcss build/masonstrap.css --use autoprefixer -d build/
 
-## Making changes to Masonstrap
-
-TODO
