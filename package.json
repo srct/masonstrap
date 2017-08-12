@@ -1,0 +1,14 @@
+{
+  "name": "masonstrap",
+  "version": "4.0",
+  "description": "Easily style any web project with Mason branding",
+  "main": "index.js",
+  "repository": "git@git.gmu.edu:srct/masonstrap.git",
+  "author": "Mason SRCT",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.11.1"
+  }
+}

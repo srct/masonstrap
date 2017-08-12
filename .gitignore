@@ -25,3 +25,4 @@ _site
 *.lock
 .sass-cache/
 bower_components
+.vscode
