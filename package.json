@@ -8,6 +8,7 @@
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "bootstrap": "4.0.0-beta",
+    "clean-css-cli": "^4.1.6",
     "jquery": "^3.2.1",
     "npm-run-all": "^4.0.2",
     "popper.js": "^1.11.1",
@@ -18,7 +19,8 @@
   "scripts": {
     "sass-lint": "stylelint masonstrap/*.scss --syntax scss",
     "sass-compile": "sass masonstrap/masonstrap.scss build/masonstrap.css",
-    "autoprefix": "npx postcss build/masonstrap.css --use autoprefixer -d build/",
-    "build-masonstrap": "npm-run-all sass-lint sass-compile autoprefix"
+    "sass-prefix": "npx postcss build/masonstrap.css --use autoprefixer -d build/",
+    "sass-minify": "cleancss --source-map --source-map-inline-sources -o build/masonstrap.min.css build/masonstrap.css",
+    "build-masonstrap": "npm-run-all sass-lint sass-compile sass-prefix sass-minify"
   }
 }
