@@ -1,36 +1,11 @@
-image: node:7.6.0
-
-build_css:
-    before_script:
-        - npm install
-        - npm install -g grunt-cli
-        - npm install -g bower
-        - apt-get update
-        - apt-get install ruby -y
-        - gem install sass
-        - bower install --allow-root
-    script:
-        - grunt build
-    artifacts:
-        paths:
-            - masonstrap/masonstrap.min.css
+image: alpine:latest
 
 pages:
-    script:
-        - npm install
-        - npm install -g grunt-cli
-        - npm install -g bower
-        - apt-get update
-        - apt-get install ruby -y
-        - gem install sass
-        - bower install --allow-root
-        - grunt build
-        - mkdir .public
-        - cp index.html demo.html .public
-        - cp -r masonstrap .public 
-        - cp -r assets .public
-        - cp -r bower_components .public
-        - mv .public public
-    artifacts:
-        paths:
-            - public
+  stage: deploy
+  script:
+  - echo 'Nothing to do...'
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
