@@ -8,3 +8,7 @@ build:
   artifacts:
     paths:
       - public/assets/css/masonstrap.min.css
+      - public/assets/js/bootstrap.min.js
+      - public/assets/js/jquery.min.js
+      - public/assets/js/popper.min.js
+      - public/assets/fonts/fontawesome-webfont.woff2
