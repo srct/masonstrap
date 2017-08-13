@@ -29,7 +29,7 @@
     "copy-js": "cp ./node_modules/jquery/dist/jquery.min.js ./public/assets/js/jquery.min.js && cp ./node_modules/jquery/dist/jquery.min.map ./public/assets/js/jquery.min.map && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./public/assets/js/bootstrap.min.js && cp ./node_modules/popper.js/dist/umd/popper.min.js ./public/assets/js/popper.min.js && cp ./node_modules/popper.js/dist/umd/popper.min.js.map ./public/assets/js/popper.min.js.map",
     "build-masonstrap": "npm-run-all copy-js copy-fonts sass-lint sass-compile sass-prefix sass-minify",
     "sass-watch": "onchange './masonstrap/*.scss' -- npm run build-masonstrap",
-    "http": "http-server -p 8000",
+    "http": "http-server -r -p 8000",
     "start": "npm-run-all copy-js copy-fonts sass-watch",
     "dev": "npm-run-all --parallel start http"
   }
