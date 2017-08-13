@@ -1,25 +1,28 @@
-# Masonstrap (GMU bootstrap theme) [![build status](https://git.gmu.edu/srct/masonstrap/badges/master/build.svg)](https://git.gmu.edu/srct/masonstrap/commits/master)
+# Masonstrap 4 (Beta 1)
+
+[![build status](https://git.gmu.edu/srct/masonstrap/badges/master/build.svg)](https://git.gmu.edu/srct/masonstrap/commits/master) [![Gitlab license](https://img.shields.io/badge/license-MIT-blue.svg)](https://git.gmu.edu/srct/masonstrap/raw/master/LICENSE)
 
 A project of [GMU SRCT](http://srct.gmu.edu).
 
 Masonstrap is a theme for bootstrap customized with GMU brand colors and
-elements. It aims to easily provide any web project with Mason branding.
+elements. It aims to easily provide any web project with Mason branding. This
+repo contains all of the necessary components to build and modify masonstrap
+on your local machine.
+
+You can find information about how to use bootstrap in their official documentation:
+
+[https://getbootstrap.com/](https://getbootstrap.com/)
 
 ## Adding Masonstrap to your project
 
-This repo contains all of the necessary components to build and modify masonstrap
-on your local machine. If you'd like just `masonstrap.min.css` head over to our
-[pipelines page](https://git.gmu.edu/srct/masonstrap/pipelines) and download the
-latest build of the css.
+You can download the latest version of Masonstrap at the following URL:
 
-Additionally this link should grab you the latest css build:
+[https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build](https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build)
 
-[https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build_css](https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build_css)
+Included is the minified CSS for masonstrap, as well as other required static
+files such as JS dependencies and fonts.
 
-## Building Masonstrap
-
-If you would like to make changes to values or behaviors in Masonstrap you will
-need to do some quick setup.
+## Building Masonstrap yourself
 
 1. Ensure `node.js` is installed:
 
@@ -34,4 +37,30 @@ need to do some quick setup.
 
         npm run build-masonstrap
 
-    `masonstrap.css`, `masonstrap.min.css`, and a source map for masonstrap will be output to `./masonstrap/`.
+    Head to `./public/assets/css` to find built masonstrap css files.
+
+## Local development
+
+You can dev on masonstrap either in Docker or on your local machine, whichever
+you prefer.
+
+### Docker
+
+Assuming you have Docker and Docker Compose installed:
+
+    docker-compose up
+
+Will run a process to rebuild masonstrap on any changes and spin up a dev server
+at [127.0.0.1:8000](http://127.0.0.1:8000)
+
+### Manual setup
+
+Spin up a process to watch for changes and rebuild masonstrap on the fly:
+
+    npm start
+
+Spin up a local web server to view the demo site:
+
+    npm run http
+
+Head to [127.0.0.1:8000](http://127.0.0.1:8000) to see the demo site!
