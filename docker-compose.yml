@@ -8,6 +8,7 @@ services:
     # Mount the masonstrap working directory
     volumes:
       - .:/usr/masonstrap/
+      - /usr/masonstrap/node_modules
     # Associate the dev server port with localhost:8000
     ports:
       - "8000:8000"

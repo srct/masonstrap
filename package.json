@@ -31,6 +31,6 @@
     "sass-watch": "onchange './masonstrap/*.scss' -- npm run build-masonstrap",
     "http": "http-server -r -p 8000",
     "start": "npm-run-all copy-js copy-fonts sass-watch",
-    "dev": "npm-run-all --parallel start http"
+    "dev": "npm-run-all --parallel build-masonstrap start http"
   }
 }
