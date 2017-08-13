@@ -33,3 +33,9 @@ public/assets/js/jquery.min.js
 public/assets/js/jquery.min.map
 public/assets/js/popper.min.js
 public/assets/js/popper.min.js.map
+public/assets/fonts/*.eot
+public/assets/fonts/*.svg
+public/assets/fonts/*.ttf
+public/assets/fonts/*.woff
+public/assets/fonts/*.woff2
+public/assets/fonts/*.otf
