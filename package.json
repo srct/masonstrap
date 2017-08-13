@@ -30,6 +30,7 @@
     "build-masonstrap": "npm-run-all copy-js copy-fonts sass-lint sass-compile sass-prefix sass-minify",
     "sass-watch": "onchange './masonstrap/*.scss' -- npm run build-masonstrap",
     "http": "http-server -p 8000",
-    "start": "npm-run-all copy-js copy-fonts sass-watch"
+    "start": "npm-run-all copy-js copy-fonts sass-watch",
+    "dev": "npm-run-all --parallel start http"
   }
 }
