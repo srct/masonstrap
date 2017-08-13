@@ -7,4 +7,4 @@ build:
     - npm run build-masonstrap
   artifacts:
     paths:
-      - masonstrap/masonstrap.min.css
+      - public/assets/css/masonstrap.min.css

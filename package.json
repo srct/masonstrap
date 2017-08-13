@@ -9,9 +9,11 @@
     "autoprefixer": "^7.1.2",
     "bootstrap": "4.0.0-beta",
     "clean-css-cli": "^4.1.6",
+    "http-server": "^0.10.0",
     "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
     "popper.js": "^1.11.1",
     "postcss-cli": "^4.1.0",
     "stylelint": "^8.0.0",
@@ -19,9 +21,13 @@
   },
   "scripts": {
     "sass-lint": "stylelint ./masonstrap/*.scss --syntax scss",
-    "sass-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 ./masonstrap/masonstrap.scss ./masonstrap/masonstrap.css",
-    "sass-prefix": "npx postcss masonstrap/masonstrap.css --use autoprefixer -d ./masonstrap/",
-    "sass-minify": "cleancss --source-map --source-map-inline-sources -o masonstrap/masonstrap.min.css masonstrap/masonstrap.css",
-    "build-masonstrap": "npm-run-all sass-lint sass-compile sass-prefix sass-minify"
+    "sass-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 ./masonstrap/masonstrap.scss ./public/assets/css/masonstrap.css",
+    "sass-prefix": "npx postcss ./public/assets/css/masonstrap.css --use autoprefixer -d ./public/assets/css/",
+    "sass-minify": "cleancss --source-map --source-map-inline-sources -o ./public/assets/css/masonstrap.min.css ./public/assets/css/masonstrap.css",
+    "copy-js": "cp ./node_modules/jquery/dist/jquery.min.js ./public/assets/js/jquery.min.js && cp ./node_modules/jquery/dist/jquery.min.map ./public/assets/js/jquery.min.map && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./public/assets/js/bootstrap.min.js && cp ./node_modules/popper.js/dist/umd/popper.min.js ./public/assets/js/popper.min.js && cp ./node_modules/popper.js/dist/umd/popper.min.js.map ./public/assets/js/popper.min.js.map",
+    "build-masonstrap": "npm-run-all copy-js sass-lint sass-compile sass-prefix sass-minify",
+    "sass-watch": "onchange './masonstrap/*.scss' -- npm run build-masonstrap",
+    "http": "http-server -p 8000",
+    "start": "npm-run-all copy-js sass-watch"
   }
 }

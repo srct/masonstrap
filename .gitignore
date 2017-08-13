@@ -14,6 +14,9 @@ Session.vim
 *~
 # auto-generated tag files
 tags
+public/assets/css/masonstrap.css
+public/assets/css/masonstrap.min.css
+public/assets/css/*.map
 masonstrap/*.css
 masonstrap/*.min.css
 masonstrap/*.map
@@ -25,3 +28,8 @@ _site
 .sass-cache/
 bower_components
 .vscode
+public/assets/js/bootstrap.min.js
+public/assets/js/jquery.min.js
+public/assets/js/jquery.min.map
+public/assets/js/popper.min.js
+public/assets/js/popper.min.js.map
