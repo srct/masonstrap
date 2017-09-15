@@ -33,34 +33,8 @@ files such as JS dependencies and fonts.
         sudo npm install -g yarn
         yarn
 
-3. Build the stylesheets:
+3. Install Gulp, the build system that we use:
 
-        npm run build-masonstrap
-
-    Head to `./public/assets/css` to find built masonstrap css files.
+        sudo npm install -g gulp-cli
 
 ## Local development
-
-You can dev on masonstrap either in Docker or on your local machine, whichever
-you prefer.
-
-### Docker
-
-Assuming you have Docker and Docker Compose installed:
-
-    docker-compose up
-
-Will run a process to rebuild masonstrap on any changes and spin up a dev server
-at [127.0.0.1:8000](http://127.0.0.1:8000)
-
-### Manual setup
-
-Spin up a process to watch for changes and rebuild masonstrap on the fly:
-
-    npm start
-
-Spin up a local web server to view the demo site:
-
-    npm run http
-
-Head to [127.0.0.1:8000](http://127.0.0.1:8000) to see the demo site!

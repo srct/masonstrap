@@ -1,7 +1,6 @@
 /*
   "scripts": {
     "copy-fonts": "cp -r ./node_modules/font-awesome/fonts/ ./public/assets/",
-    "copy-js": "cp ./node_modules/jquery/dist/jquery.min.js ./public/assets/js/jquery.min.js && cp ./node_modules/jquery/dist/jquery.min.map ./public/assets/js/jquery.min.map && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./public/assets/js/bootstrap.min.js && cp ./node_modules/popper.js/dist/umd/popper.min.js ./public/assets/js/popper.min.js && cp ./node_modules/popper.js/dist/umd/popper.min.js.map ./public/assets/js/popper.min.js.map",
     "http": "http-server -r -p 8000",
     "dev": "npm-run-all --parallel build-masonstrap start http"
   },
@@ -15,12 +14,41 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglifycss = require('gulp-uglifycss');
 const rename = require("gulp-rename");
+const imagemin = require('gulp-imagemin');
+const merge = require('merge-stream');
 
 // Reusable directories
-const src = './src/'
-const dest = './dist/'
+const src = './src'
+const dest = './build'
 
-// Compile, autoprefix, minify scss
+// Move html to build/html
+gulp.task('html', () => gulp.src(src + '/html/*.html')
+  .pipe(gulp.dest(dest))
+);
+
+// Optimize images and move them to build/img
+gulp.task('img', () => gulp.src(src + '/img/*')
+.pipe(imagemin())
+.pipe(gulp.dest(dest + '/img')));
+
+// Move required js files to build/js
+gulp.task('js', () => {
+  let bootstrap = gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+  .pipe(gulp.dest(dest + '/js/'))
+  
+  let jquery = gulp.src('./node_modules/jquery/dist/jquery.min.js')
+  .pipe(gulp.dest(dest + '/js/'))
+  
+  let popper = gulp.src('./node_modules/popper.js/dist/umd/popper.min.js')
+  .pipe(gulp.dest(dest + '/js/'))
+  
+  let masonstrap = gulp.src(src + '/js/*.js')
+  .pipe(gulp.dest(dest + '/js/'))
+
+  return merge(bootstrap, jquery, popper, masonstrap)
+});
+
+// Compile, autoprefix, minify scss with sourcemaps
 gulp.task('sass', () => gulp.src(src + '/scss/*.scss')
 .pipe(sourcemaps.init())
 .pipe(sass().on('error', sass.logError))
@@ -31,12 +59,16 @@ gulp.task('sass', () => gulp.src(src + '/scss/*.scss')
 .pipe(rename({extname: ".min.css"}))
 .pipe(gulp.dest(dest + '/css/')));
 
+// Run task whenever associated files change
 gulp.task('watch', () => {
-  // Run `sass` task whenever scss files change
   gulp.watch(src + '/scss/*.scss', ['sass'])
+  gulp.watch(src + '/html/*.html', ['html'])
+  gulp.watch(src + '/img/*', ['img'])
+  gulp.watch(src + '/js/*.js', ['js'])
 });
 
 // Run all tasks
-gulp.task('run', ['sass']);
+gulp.task('run', ['sass', 'html', 'img', 'js']);
 
-gulp.task('default', ['run', 'watch'])
+// By default, run all tasks and then rebuild on changes
+gulp.task('default', ['run', 'watch']);

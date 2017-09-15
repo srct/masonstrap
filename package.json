@@ -9,6 +9,7 @@
     "autoprefixer": "^7.1.4",
     "bootstrap": "4.0.0-beta",
     "font-awesome": "^4.7.0",
+    "gulp-imagemin": "^3.3.0",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
@@ -16,6 +17,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.8",
     "jquery": "^3.2.1",
+    "merge-stream": "^1.0.1",
     "popper.js": "^1.11.1"
   },
   "devDependencies": {
