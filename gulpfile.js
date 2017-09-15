@@ -14,7 +14,25 @@
 */
 // Gulp Imports
 var gulp = require('gulp');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var uglifycss = require('gulp-uglifycss');
+var rename = require("gulp-rename");
 
-gulp.task('default', () => {
-  // place code for your default task here
+gulp.task('sass', function () {
+ return gulp.src('./masonstrap/**/*.scss')
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss([autoprefixer()]))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./public/assets/css/'))
+  .pipe(uglifycss())
+  .pipe(rename({extname: ".min.css"}))
+  .pipe(gulp.dest('./public/assets/css/'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./masonstrap/**/*.scss', ['sass']);
 });
