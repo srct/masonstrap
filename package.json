@@ -6,17 +6,10 @@
   "author": "Mason SRCT",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^7.1.2",
     "bootstrap": "4.0.0-beta",
-    "clean-css-cli": "^4.1.6",
     "font-awesome": "^4.7.0",
-    "http-server": "^0.10.0",
     "jquery": "^3.2.1",
-    "node-sass": "^4.5.3",
-    "npm-run-all": "^4.0.2",
-    "onchange": "^3.2.1",
-    "popper.js": "^1.11.1",
-    "postcss-cli": "^4.1.0"
+    "popper.js": "^1.11.1"
   },
   "scripts": {
     "sass-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 ./masonstrap/masonstrap.scss ./public/assets/css/masonstrap.css",
@@ -29,5 +22,8 @@
     "http": "http-server -r -p 8000",
     "start": "npm-run-all copy-js copy-fonts sass-watch",
     "dev": "npm-run-all --parallel build-masonstrap start http"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
