@@ -18,6 +18,8 @@ pages:
   stage: deploy
   script:
     - gulp build
+    - mkdir public
+    - mv build/* public
   artifacts:
     paths:
-      - build
+      - public
