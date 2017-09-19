@@ -16,20 +16,22 @@ const uglifycss = require('gulp-uglifycss');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const merge = require('merge-stream');
+const connect = require('gulp-connect');
 
 // Reusable directories
 const src = './src'
 const dest = './build'
 
 // Move html to build/html
-gulp.task('html', () => gulp.src(src + '/html/*.html')
+gulp.task('html', () => gulp.src(src + '/html/*.html').pipe(connect.reload())
   .pipe(gulp.dest(dest))
 );
 
 // Optimize images and move them to build/img
-gulp.task('img', () => gulp.src(src + '/img/*')
+gulp.task('img', () => gulp.src(src + '/img/*').pipe(connect.reload())
 .pipe(imagemin())
-.pipe(gulp.dest(dest + '/img')));
+.pipe(gulp.dest(dest + '/img'))
+);
 
 // Move required js files to build/js
 gulp.task('js', () => {
@@ -45,11 +47,11 @@ gulp.task('js', () => {
   let masonstrap = gulp.src(src + '/js/*.js')
   .pipe(gulp.dest(dest + '/js/'))
 
-  return merge(bootstrap, jquery, popper, masonstrap)
+  return merge(bootstrap, jquery, popper, masonstrap).pipe(connect.reload())  
 });
 
 // Compile, autoprefix, minify scss with sourcemaps
-gulp.task('sass', () => gulp.src(src + '/scss/*.scss')
+gulp.task('sass', () => gulp.src(src + '/scss/*.scss').pipe(connect.reload())
 .pipe(sourcemaps.init())
 .pipe(sass().on('error', sass.logError))
 .pipe(postcss([autoprefixer()]))
@@ -57,7 +59,8 @@ gulp.task('sass', () => gulp.src(src + '/scss/*.scss')
 .pipe(gulp.dest(dest + '/css/'))
 .pipe(uglifycss())
 .pipe(rename({extname: ".min.css"}))
-.pipe(gulp.dest(dest + '/css/')));
+.pipe(gulp.dest(dest + '/css/')
+));
 
 // Run task whenever associated files change
 gulp.task('watch', () => {
@@ -67,8 +70,15 @@ gulp.task('watch', () => {
   gulp.watch(src + '/js/*.js', ['js'])
 });
 
+gulp.task('http', () => {
+  connect.server({
+    root: './build/',
+    livereload: true
+  });
+});
+
 // Run all tasks
-gulp.task('run', ['sass', 'html', 'img', 'js']);
+gulp.task('build', ['sass', 'html', 'img', 'js']);
 
 // By default, run all tasks and then rebuild on changes
-gulp.task('default', ['run', 'watch']);
+gulp.task('default', ['http', 'build', 'watch']);
