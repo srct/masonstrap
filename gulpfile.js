@@ -1,11 +1,3 @@
-/*
-  "scripts": {
-    "copy-fonts": "cp -r ./node_modules/font-awesome/fonts/ ./public/assets/",
-    "http": "http-server -r -p 8000",
-    "dev": "npm-run-all --parallel build-masonstrap start http"
-  },
-*/
-
 // Gulp Imports
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -70,6 +62,7 @@ gulp.task('watch', () => {
   gulp.watch(src + '/js/*.js', ['js'])
 });
 
+// LiveReload dev server
 gulp.task('http', () => {
   connect.server({
     root: './build/',
