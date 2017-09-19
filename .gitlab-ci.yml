@@ -15,8 +15,9 @@ build:
       - build/fonts
 
 pages:
+  stage: deploy
   script:
     - gulp build
   artifacts:
     paths:
-      - public
+      - build
