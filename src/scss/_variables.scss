@@ -1,32 +1,80 @@
 // Masonstrap 4.0 Variables
 
-// PRIMARY PALETTE -- SIGNATURE COLORS
+// Global Bootstrap Options Overrides ------------------------------------------
+$enable-shadows: true;
+$enable-gradients: true;
+
+// Mason Branding Colors -------------------------------------------------------
+
+$primary-palette: ( 
+  // The color may be used for either large areas of color or as an accent
+  // color.
+  mason-green: #006633,
+  // It should be used primarily as an accent color and, with very rare
+  // exception, never as a type color.
+  mason-gold: #FFCC33  
+);
+
+// Get a key from the primary-palette map
+@function get-primary-palette($key) {
+  @if map-has-key($primary-palette, $key) {
+    @return map-get($primary-palette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $primary-palette.";
+  @return null;
+}
 
 /*
-    Mason Green is a cool color that can represent nature, prosperity, renewal,
-    growth, calm, and strength. Many of these attributes tie in with the themes
-    and tone of the wording in the Message Map. The color may be used for either
-    large areas of color or as an accent color.
+  The universal palette colors work well as accent colors or as subtle
+  backgrounds behind typography or graphics. Darker colors may be used behind
+  light-colored typography. Screens or tints of the supporting colors may be
+  used to achieve the desired effect but should be used cautiously, as
+  screening certain colors may result in undesirable pastels.
 */
-$mason_green: #006633;
+$universal-palette: (
+  dark-turqiose: #00909E,
+  medium-slate-blue: #425195,
+  cardinal-red: #AC1D37,
+  bright-green: #81902B,
+  dark-goldenrod: #9D7F00,
+  tangerine: #F7941E
+);
+
+// Get a key from the universal-palette map
+@function get-universal-palette($key) {
+  @if map-has-key($universal-palette, $key) {
+    @return map-get($universal-palette, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $universal-palette.";
+  @return null;
+}
 
 /*
-    Mason Gold is a very bold warm color that can represent optimism,
-    enthusiasm, fun, clarity, and confidence — again many of the attributes
-    described in the message map. Because it is such a dominant color, with few
-    exceptions, a little Mason Gold goes a long way. The color is very effective
-    used solely or with Mason green on publications and merchandise targeted at
-    enhancing school spirit. Otherwise, it should be used primarily as an accent
-    color and, with very rare exception, never as a type color.
+  The neutral palette can stand alone or be used to complement any of
+  the other color palettes. A neutral tone is also a great bridge to drop between two colors from one of
+  the other palettes. Using two strong colors from one of the other palettes
+  with a neutral gives you flexibility without color overload.
 */
-$mason_gold: #FFCC33;
+$neutral-palette: (
+  light-gray: #D1D3D5,
+  exploratory-gray: #A9A0AD,
+  observatory-gray: #87908F,
+  light-taupe-tile: #CCC288,
+  foundation-stone: #A39382,
+  statue-bronze: #A39382,
+  mason-tan: #E4E6D7,
+  southside-glass: #a0c9c1,
+  school-of-art-stone: #D8D8C1
+);
 
-// DEFAULT => PRIMARY + UNIVERSAL SUPPORTING COLORS
+// Get a key from the neutral-palette map
+@function get-neutral-palette($key) {
+  @if map-has-key($neutral-palette, $key) {
+    @return map-get($neutral-palette, $key);
+  }
 
-/*
-    The secondary palette colors work well as accent colors or as subtle
-    backgrounds behind typography or graphics. Darker colors may be used behind
-    light-colored typography. Screens or tints of the supporting colors may be
-    used to achieve the desired effect but should be used cautiously, as
-    screening certain colors may result in undesirable pastels.
-*/
+  @warn "Unknown `#{$key}` in $neutral-palette.";
+  @return null;
+}

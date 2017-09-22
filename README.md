@@ -17,7 +17,7 @@ You can find information about how to use bootstrap in their official documentat
 
 You can download the latest version of Masonstrap at the following URL:
 
-[https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build](https://git.gmu.edu/srct/masonstrap/builds/artifacts/master/download?job=build)
+[https://git.gmu.edu/srct/masonstrap/-/jobs/artifacts/master/download?job=build](https://git.gmu.edu/srct/masonstrap/-/jobs/artifacts/master/download?job=build)
 
 Included is the minified CSS for masonstrap, as well as other required static
 files such as JS dependencies and fonts.
@@ -37,4 +37,17 @@ files such as JS dependencies and fonts.
 
         sudo npm install -g gulp-cli
 
+4. Build Masonstrap
+
+        gulp build
+
 ## Local development
+
+You can spin up a development server with:
+
+        gulp
+
+Head to [127.0.0.1:8080](127.0.0.1:8080) to view!
+
+Any changes made in `src/` are automatically applied to the dev server. DO NOT
+EDIT IN `build/`, changes WILL NOT be committed.
