@@ -16,33 +16,33 @@ const dest = './build'
 
 // Move fonts to build/fonts
 gulp.task('fonts', () => gulp.src('./node_modules/font-awesome/fonts/fontawesome-webfont.woff2').pipe(connect.reload())
-.pipe(gulp.dest(dest + '/masonstrap/fonts/'))
+.pipe(gulp.dest(dest + '/fonts/'))
 );
 
 // Move html to build/html
 gulp.task('html', () => gulp.src(src + '/html/*.html').pipe(connect.reload())
-  .pipe(gulp.dest(dest + '/masonstrap/'))
+  .pipe(gulp.dest(dest))
 );
 
 // Optimize images and move them to build/img
 gulp.task('img', () => gulp.src(src + '/img/*').pipe(connect.reload())
 .pipe(imagemin())
-.pipe(gulp.dest(dest + '/masonstrap/img/'))
+.pipe(gulp.dest(dest + '/img/'))
 );
 
 // Move required js files to build/js
 gulp.task('js', () => {
   let bootstrap = gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
-  .pipe(gulp.dest(dest + '/masonstrap/js/'))
+  .pipe(gulp.dest(dest + '/js/'))
   
   let jquery = gulp.src('./node_modules/jquery/dist/jquery.min.js')
-  .pipe(gulp.dest(dest + '/masonstrap/js/'))
+  .pipe(gulp.dest(dest + '/js/'))
   
   let popper = gulp.src('./node_modules/popper.js/dist/umd/popper.min.js')
-  .pipe(gulp.dest(dest + '/masonstrap/js/'))
+  .pipe(gulp.dest(dest + '/js/'))
   
   let masonstrap = gulp.src(src + '/js/*.js')
-  .pipe(gulp.dest(dest + '/masonstrap/js/'))
+  .pipe(gulp.dest(dest + '/js/'))
 
   return merge(bootstrap, jquery, popper, masonstrap).pipe(connect.reload())  
 });
@@ -53,10 +53,10 @@ gulp.task('sass', () => gulp.src(src + '/scss/*.scss').pipe(connect.reload())
 .pipe(sass().on('error', sass.logError))
 .pipe(postcss([autoprefixer()]))
 .pipe(sourcemaps.write())
-.pipe(gulp.dest(dest + '/masonstrap/css/'))
+.pipe(gulp.dest(dest + '/css/'))
 .pipe(uglifycss())
 .pipe(rename({extname: ".min.css"}))
-.pipe(gulp.dest(dest + '/masonstrap/css/')
+.pipe(gulp.dest(dest + '/css/')
 ));
 
 // Run task whenever associated files change
