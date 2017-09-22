@@ -5,12 +5,17 @@
  * source code: (https://git.gmu.edu/srct/masonstrap)
  * license: MIT (https://git.gmu.edu/srct/masonstrap/raw/master/LICENSE)
  */
-
+// Masonstrap custom functions
+@import "_functions";
 // Load in variable overwrites
-@import '_variables.scss';
-// Load in component overwrites
-@import '_components.scss';
+@import '_variables';
 // Load in FA 4
-@import '../../node_modules/font-awesome/scss/font-awesome.scss';
+@import '../../node_modules/font-awesome/scss/font-awesome';
 // Load in bootstrap 4
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+// Masonstrap custom mixins
+@import "_mixins";
+// Masonstrap custom overwrites
+@import "_overwrites";
+// Masonstrap custom styles
+@import "_styles";
