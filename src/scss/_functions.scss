@@ -1,3 +1,5 @@
+// Custom functions
+
 // Get a key from the primary-palette map
 @function get-primary-palette($key) {
   @if map-has-key($primary-palette, $key) {
