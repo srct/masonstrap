@@ -31,20 +31,49 @@
     <title>Masonstrap 4 &bull; Home</title>
 
     <!-- Load in static content -->
-    <link rel="icon" href="/img/favicon.ico" sizes="16x16">
-    <link rel="stylesheet" href="/css/masonstrap.min.css" media="screen">
+    <link rel="icon" href="/masonstrap/img/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="/masonstrap/css/masonstrap.min.css" media="screen">
   </head>
 
-  <body>
-    <button type="button" class="btn btn-primary">Primary</button>
-  </body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand d-flex mx-auto" href="#">
+      <img src="/img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top" alt="SRCT Masonstrap">
+      &nbsp;Masonstrap
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Demo</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Source Files
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      <button class="btn btn-outline-accent my-2 my-sm-0" type="submit">Download</button>
+    </div>
+  </nav>
+
 
   <footer>
 
   </footer>
 
   <!-- load in external js -->
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
+  <script src="/masonstrap/js/jquery.min.js"></script>
+  <script src="/masonstrap/js/popper.min.js"></script>
+  <script src="/masonstrap/js/bootstrap.min.js"></script>
+
 </html>
