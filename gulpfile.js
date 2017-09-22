@@ -21,7 +21,7 @@ gulp.task('fonts', () => gulp.src('./node_modules/font-awesome/fonts/fontawesome
 
 // Move html to build/html
 gulp.task('html', () => gulp.src(src + '/html/*.html').pipe(connect.reload())
-  .pipe(gulp.dest(dest))
+  .pipe(gulp.dest(dest + '/masonstrap/'))
 );
 
 // Optimize images and move them to build/img
@@ -53,7 +53,7 @@ gulp.task('sass', () => gulp.src(src + '/scss/*.scss').pipe(connect.reload())
 .pipe(sass().on('error', sass.logError))
 .pipe(postcss([autoprefixer()]))
 .pipe(sourcemaps.write())
-.pipe(gulp.dest(dest + '/css/'))
+.pipe(gulp.dest(dest + '/masonstrap/css/'))
 .pipe(uglifycss())
 .pipe(rename({extname: ".min.css"}))
 .pipe(gulp.dest(dest + '/masonstrap/css/')
