@@ -105,6 +105,7 @@ $colors: (
 
 $theme-colors: (
   primary: get-primary-palette('mason-green'),
+  accent: get-primary-palette('mason-gold'),
   secondary: $gray-600,
   success: $green,
   info: $cyan,
@@ -112,5 +113,4 @@ $theme-colors: (
   danger: $red,
   light: $gray-100,
   dark: $gray-800,
-  accent: get-primary-palette('mason-gold')
 );

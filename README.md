@@ -45,9 +45,9 @@ files such as JS dependencies and fonts.
 
 You can spin up a development server with:
 
-        gulp
+    gulp
 
-Head to [127.0.0.1:8080](127.0.0.1:8080) to view!
+Head to [127.0.0.1:8000](127.0.0.1:8000) to view!
 
 Any changes made in `src/` are automatically applied to the dev server. DO NOT
 EDIT IN `build/`, changes WILL NOT be committed.
