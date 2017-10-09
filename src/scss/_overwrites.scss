@@ -1,1 +1,9 @@
 // Things that originate from Bootstrap that we overwrite
+
+legend {
+    @extend legend;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+}
