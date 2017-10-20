@@ -32,15 +32,12 @@ gulp.task('img', () => gulp.src(src + '/img/*').pipe(connect.reload())
 
 // Move required js files to build/js
 gulp.task('js', () => {
-  let bootstrap = gulp.src('./node_modules/bootstrap/dist/js/bootstrap.min.js')
+  let bootstrap = gulp.src('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
   .pipe(gulp.dest(dest + '/js/'))
   
   let jquery = gulp.src('./node_modules/jquery/dist/jquery.min.js')
   .pipe(gulp.dest(dest + '/js/'))
-  
-  let popper = gulp.src('./node_modules/popper.js/dist/umd/popper.min.js')
-  .pipe(gulp.dest(dest + '/js/'))
-  
+   
   let masonstrap = gulp.src(src + '/js/*.js')
   .pipe(gulp.dest(dest + '/js/'))
 

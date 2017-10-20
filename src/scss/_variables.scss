@@ -7,21 +7,10 @@ $enable-gradients: true;
 // Mason Branding Colors -------------------------------------------------------
 
 $primary-palette: ( 
-  // The color may be used for either large areas of color or as an accent
-  // color.
   mason-green: #006633,
-  // It should be used primarily as an accent color and, with very rare
-  // exception, never as a type color.
   mason-gold: #FFCC33  
 );
 
-/*
-  The universal palette colors work well as accent colors or as subtle
-  backgrounds behind typography or graphics. Darker colors may be used behind
-  light-colored typography. Screens or tints of the supporting colors may be
-  used to achieve the desired effect but should be used cautiously, as
-  screening certain colors may result in undesirable pastels.
-*/
 $universal-palette: (
   dark-turqiose: #00909E,
   medium-slate-blue: #425195,
@@ -31,13 +20,6 @@ $universal-palette: (
   tangerine: #F7941E
 );
 
-/*
-  The neutral palette can stand alone or be used to complement any of
-  the other color palettes. A neutral tone is also a great bridge to drop
-  between two colors from one of the other palettes. Using two strong colors
-  from one of the other palettes with a neutral gives you flexibility without
-  color overload.
-*/
 $neutral-palette: (
   light-gray: #D1D3D5,
   exploratory-gray: #A9A0AD,
@@ -52,65 +34,7 @@ $neutral-palette: (
 
 // Bootstrap Color Overrides ---------------------------------------------------
 
-$white:  #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #868e96;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
-$black:  #000;
-
-$grays: (
-  100: $gray-100,
-  200: $gray-200,
-  300: $gray-300,
-  400: $gray-400,
-  500: $gray-500,
-  600: $gray-600,
-  700: $gray-700,
-  800: $gray-800,
-  900: $gray-900
-);
-
-$blue:    #007bff;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #28a745;
-$teal:    #20c997;
-$cyan:    #17a2b8;
-
-$colors: (
-  blue: $blue,
-  indigo: $indigo,
-  purple: $purple,
-  pink: $pink,
-  red: $red,
-  orange: $orange,
-  yellow: $yellow,
-  green: $green,
-  teal: $teal,
-  cyan: $cyan,
-  white: $white,
-  gray: $gray-600,
-  gray-dark: $gray-800
-);
-
 $theme-colors: (
   primary: get-primary-palette('mason-green'),
   accent: get-primary-palette('mason-gold'),
-  secondary: $gray-600,
-  success: $green,
-  info: $cyan,
-  warning: $yellow,
-  danger: $red,
-  light: $gray-100,
-  dark: $gray-800,
 );

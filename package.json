@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^7.1.4",
-    "bootstrap": "4.0.0-beta",
+    "bootstrap": "4.0.0-beta.2",
     "font-awesome": "^4.7.0",
     "gulp-connect": "^5.0.0",
     "gulp-imagemin": "^3.3.0",
@@ -18,8 +18,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.8",
     "jquery": "^3.2.1",
-    "merge-stream": "^1.0.1",
-    "popper.js": "^1.11.1"
+    "merge-stream": "^1.0.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
