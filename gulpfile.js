@@ -41,7 +41,7 @@ gulp.task('js', () => {
   let masonstrap = gulp.src(src + '/js/*.js')
   .pipe(gulp.dest(dest + '/js/'))
 
-  return merge(bootstrap, jquery, popper, masonstrap).pipe(connect.reload())  
+  return merge(bootstrap, jquery, masonstrap).pipe(connect.reload())  
 });
 
 // Compile, autoprefix, minify scss with sourcemaps
