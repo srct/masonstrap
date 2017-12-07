@@ -14,11 +14,6 @@ const connect = require('gulp-connect');
 const src = './src'
 const dest = './build'
 
-// Move fonts to build/fonts
-gulp.task('fonts', () => gulp.src('./node_modules/font-awesome/fonts/fontawesome-webfont.woff2').pipe(connect.reload())
-.pipe(gulp.dest(dest + '/fonts/'))
-);
-
 // Move html to build/html
 gulp.task('html', () => gulp.src(src + '/html/*.html').pipe(connect.reload())
   .pipe(gulp.dest(dest))
@@ -74,7 +69,7 @@ gulp.task('http', () => {
 });
 
 // Run all tasks
-gulp.task('build', ['sass', 'html', 'img', 'js', 'fonts']);
+gulp.task('build', ['sass', 'html', 'img', 'js']);
 
 // By default, run all tasks and then rebuild on changes
 gulp.task('default', ['http', 'build', 'watch']);

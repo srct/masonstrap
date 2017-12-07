@@ -6,9 +6,9 @@
   "author": "Mason SRCT",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.0.0",
     "autoprefixer": "^7.1.4",
     "bootstrap": "4.0.0-beta.2",
-    "font-awesome": "^4.7.0",
     "gulp-connect": "^5.0.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-postcss": "^7.0.0",
