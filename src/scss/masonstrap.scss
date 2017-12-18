@@ -9,6 +9,11 @@
 @import "_functions";
 // Load in variable overwrites
 @import '_variables';
+// Load in FA 5
+@import '../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-brands.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss';
 // Load in bootstrap 4
 @import '../../node_modules/bootstrap/scss/bootstrap';
 // Masonstrap custom mixins

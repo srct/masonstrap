@@ -14,6 +14,20 @@ const connect = require('gulp-connect');
 const src = './src'
 const dest = './build'
 
+// Move fonts to build/fonts
+gulp.task('fonts', () => {
+  let brands = gulp.src('./node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/fa-brands-400.woff2')
+  .pipe(gulp.dest(dest + '/fonts/'))
+
+  let regular = gulp.src('./node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/fa-regular-400.woff2')
+  .pipe(gulp.dest(dest + '/fonts/'))
+  
+  let solid = gulp.src('./node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/fa-solid-900.woff2')
+  .pipe(gulp.dest(dest + '/fonts/'))
+
+  return merge(brands, regular, solid).pipe(connect.reload())  
+});
+
 // Move html to build/html
 gulp.task('html', () => gulp.src(src + '/html/*.html').pipe(connect.reload())
   .pipe(gulp.dest(dest))
@@ -69,7 +83,7 @@ gulp.task('http', () => {
 });
 
 // Run all tasks
-gulp.task('build', ['sass', 'html', 'img', 'js']);
+gulp.task('build', ['sass', 'html', 'img', 'js', 'fonts']);
 
 // By default, run all tasks and then rebuild on changes
 gulp.task('default', ['http', 'build', 'watch']);
