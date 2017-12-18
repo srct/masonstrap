@@ -3,6 +3,7 @@ image: node:latest
 before_script:
   - npm i --save @fortawesome/fontawesome
   - yarn
+  - yarn add @fortawesome/fontawesome-free-webfonts
   - npm install -g gulp
 
 build:
