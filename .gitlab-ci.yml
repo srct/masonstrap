@@ -1,6 +1,7 @@
 image: node:latest
 
 before_script:
+  - npm i --save @fortawesome/fontawesome
   - yarn
   - npm install -g gulp
 
