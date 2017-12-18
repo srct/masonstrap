@@ -9,6 +9,8 @@ const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const merge = require('merge-stream');
 const connect = require('gulp-connect');
+const concat = require('gulp-concat')
+const minify = require('gulp-minify');
 
 // Reusable directories
 const src = './src'
@@ -39,19 +41,11 @@ gulp.task('img', () => gulp.src(src + '/img/*').pipe(connect.reload())
 .pipe(gulp.dest(dest + '/img/'))
 );
 
-// Move required js files to build/js
-gulp.task('js', () => {
-  let bootstrap = gulp.src('./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
-  .pipe(gulp.dest(dest + '/js/'))
-  
-  let jquery = gulp.src('./node_modules/jquery/dist/jquery.min.js')
-  .pipe(gulp.dest(dest + '/js/'))
-   
-  let masonstrap = gulp.src(src + '/js/*.js')
-  .pipe(gulp.dest(dest + '/js/'))
-
-  return merge(bootstrap, jquery, masonstrap).pipe(connect.reload())  
-});
+// Build masonstrap.min.js
+gulp.task('js', () => gulp.src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', src + '/js/*.js'])
+    .pipe(concat('masonstrap.js'))
+    .pipe(minify({ext: ".min.js"}))
+    .pipe(gulp.dest(dest + '/js/')));
 
 // Compile, autoprefix, minify scss with sourcemaps
 gulp.task('sass', () => gulp.src(src + '/scss/*.scss').pipe(connect.reload())
