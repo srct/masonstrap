@@ -22,6 +22,15 @@ You can download the latest version of Masonstrap at the following URL:
 Included is the minified CSS for masonstrap, as well as other required static
 files such as JS dependencies and fonts.
 
+In lieu of serving the files yourself, you can utilize Gitlab Pages as a CDN:
+
+```html
+<link href="https://srct.gmu.io/masonstrap/css/masonstrap.min.css" rel="stylesheet">
+<script src="https://srct.gmu.io/masonstrap/js/masonstrap.min.js" />
+```
+
+Note: Use at your own risk. :)
+
 ## Building Masonstrap yourself
 
 1. Ensure `node.js` is installed:
