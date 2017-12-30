@@ -1,4 +1,4 @@
-# Masonstrap 4 (Beta 1)
+# Masonstrap 4 (Beta 3)
 
 [![build status](https://git.gmu.edu/srct/masonstrap/badges/master/build.svg)](https://git.gmu.edu/srct/masonstrap/commits/master) [![Gitlab license](https://img.shields.io/badge/license-MIT-blue.svg)](https://git.gmu.edu/srct/masonstrap/raw/master/LICENSE)
 
