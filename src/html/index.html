@@ -37,44 +37,39 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand d-flex mx-auto" href="./index.html">
-      <img src="./img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top" alt="SRCT Masonstrap">
-      &nbsp;Masonstrap&nbsp;
-    </a>
+    <div class="container">
+      <a class="navbar-brand d-flex mx-auto mr-2" href="./index.html">
+        <img src="./img/SRCT_square.svg" width="30" height="30" class="d-inline-block align-top mr-2" alt="SRCT Masonstrap">
+        Masonstrap 4
+      </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="./demo.html">Demo</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Source Files
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="./css/masonstrap.css">masonstrap.css</a>
-          </div>
-        </li>
-      </ul>
-      <a class="btn accent-btn-outline" href="https://git.gmu.edu/srct/masonstrap/-/jobs/artifacts/master/download?job=build">Download</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Source Files
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <h6 class="dropdown-header">CSS</h6>
+              <a class="dropdown-item" href="./css/masonstrap.css">masonstrap.css</a>
+              <a class="dropdown-item" href="./css/masonstrap.min.css">masonstrap.min.css</a>
+              <div class="dropdown-divider"></div>
+              <h6 class="dropdown-header">JS</h6>
+              <a class="dropdown-item" href="./js/masonstrap.js">masonstrap.js</a>
+              <a class="dropdown-item" href="./js/masonstrap.min.js">masonstrap.min.js</a>
+            </div>
+          </li>
+        </ul>
+        <a class="btn accent-btn-outline" href="https://git.gmu.edu/srct/masonstrap/-/jobs/artifacts/master/download?job=build">Download</a>
+      </div>
+  
     </div>
   </nav>
-
-  <body style="">
-    <div class="container" style="padding-top: 5rem;">
-      <h1>
-          <span class="fa-stack">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fas fa-paint-brush fa-stack-1x fa-inverse"></i>
-            </span> Masonstrap
-      </h1>
-      <hr />
-  </body>
 
   <!-- load in external js -->
   <script src="./js/masonstrap.min.js"></script>
