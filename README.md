@@ -26,7 +26,7 @@ In lieu of serving the files yourself, you can utilize Gitlab Pages as a CDN:
 
 ```html
 <link href="https://srct.gmu.io/masonstrap/css/masonstrap.min.css" rel="stylesheet">
-<script src="https://srct.gmu.io/masonstrap/js/masonstrap.min.js" />
+<script src="https://srct.gmu.io/masonstrap/js/masonstrap.min.js"></script>
 ```
 
 Note: Use at your own risk. :)
