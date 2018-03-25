@@ -112,7 +112,7 @@
       </div>
 
       <div class="col-md-6">
-        <div class="card bg-light">
+        <div class="card bg-light mb-3">
           <h5 class="card-header">JS</h5>
           <div class="card-body">
             <pre class="p-3"><code>&lt;script src="https://srct.gmu.io/masonstrap/js/masonstrap.min.js"&gt;&lt;/script&gt;</code></pre>
@@ -122,13 +122,27 @@
     </div>
   </div>
 
-  <div class="footer">
+  <!-- Desktop footer -->
+  <div class="footer d-none d-md-block">
     <div class="container d-flex">
       <span class="text-muted mx-auto">A project of <a href="https://www.srct.gmu.edu">GMU <strong>SRCT</strong></a> | Freely Licensed under <a href="https://git.gmu.edu/srct/masonstrap/blob/master/LICENSE">MIT</a> | <a href="https://git.gmu.edu/srct/masonstrap/blob/master/CHANGELOG.md">v4.0</a></span>
     </div>
   </div>
 
-  <!-- load in external js -->
+  <!-- Mobile footer -->
+  <div class="footer container text-center d-sm-block d-md-none d-lg-none d-xl-none">
+    <div class="col-sm-4 text-muted">
+      A project of <a href="https://www.srct.gmu.edu">GMU <strong>SRCT</strong></a>
+    </div>
+    <div class="col-sm-4 text-muted">
+      Freely Licensed under <a href="https://git.gmu.edu/srct/masonstrap/blob/master/LICENSE">MIT</a>
+    </div>
+    <div class="col-sm-4 text-muted">
+      <a href="https://git.gmu.edu/srct/masonstrap/blob/master/CHANGELOG.md">v4.0</a>
+    </div>
+  </div>
+  
+  <!-- External js -->
   <script src="./js/masonstrap.min.js"></script>
 
 </html>
