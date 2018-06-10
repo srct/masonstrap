@@ -1,7 +1,6 @@
 .idea
 components
 node_modules
-build
 _site
 .sass-cache/
 # swap
@@ -23,7 +22,6 @@ masonstrap/*.map
 .idea
 components
 node_modules
-build
 _site
 .sass-cache/
 bower_components
@@ -39,3 +37,8 @@ public/assets/fonts/*.ttf
 public/assets/fonts/*.woff
 public/assets/fonts/*.woff2
 public/assets/fonts/*.otf
+build/img
+build/demo.html
+build/index.html
+build/css/masonstrap.css
+build/js/masonstrap.js

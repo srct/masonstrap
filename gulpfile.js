@@ -21,7 +21,7 @@ const all_js = ['./node_modules/jquery/dist/jquery.min.js',
 
 // Move fonts to build/fonts
 gulp.task('fonts', () => {
-  let fa = gulp.src('./node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*.woff2')
+  let fa = gulp.src('./node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*')
   .pipe(gulp.dest(dest + '/fonts/'))
 
   return merge(fa).pipe(connect.reload())  
