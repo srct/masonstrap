@@ -16,16 +16,10 @@ const minify = require('gulp-minify');
 const src = './src'
 const dest = './build'
 const all_js = ['./node_modules/jquery/dist/jquery.min.js',
-                './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-                src + '/js/*.js'];
-
-// Move fonts to build/fonts
-gulp.task('fonts', () => {
-  let fa = gulp.src('./node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*')
-  .pipe(gulp.dest(dest + '/fonts/'))
-
-  return merge(fa).pipe(connect.reload())  
-});
+  './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+  './node_modules/@fortawesome/fontawesome-free/js/all.js',
+  src + '/js/*.js'
+];
 
 // Move html to build/html
 gulp.task('html', () => gulp.src(src + '/html/*.html')
@@ -43,7 +37,9 @@ gulp.task('img', () => gulp.src(src + '/img/*')
 // Build masonstrap.min.js
 gulp.task('js', () => gulp.src(all_js)
   .pipe(concat('masonstrap.js'))
-  .pipe(minify({ext: ".min.js"}))
+  .pipe(minify({
+    ext: ".min.js"
+  }))
   .pipe(gulp.dest(dest + '/js/'))
 );
 
@@ -56,7 +52,9 @@ gulp.task('sass', () => gulp.src(src + '/scss/*.scss')
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(dest + '/css/'))
   .pipe(uglifycss())
-  .pipe(rename({extname: ".min.css"}))
+  .pipe(rename({
+    extname: ".min.css"
+  }))
   .pipe(gulp.dest(dest + '/css/'))
 );
 
@@ -78,7 +76,7 @@ gulp.task('http', () => {
 });
 
 // Run all tasks
-gulp.task('build', ['sass', 'html', 'img', 'js', 'fonts']);
+gulp.task('build', ['sass', 'html', 'img', 'js']);
 
 // By default, run all tasks and then rebuild on changes
 gulp.task('default', ['http', 'build', 'watch']);

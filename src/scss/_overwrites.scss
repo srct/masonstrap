@@ -1,5 +1,4 @@
 // Things that originate from Bootstrap that we overwrite
-
 // Legacy legend behavior
 legend {
   @extend legend;
@@ -10,12 +9,12 @@ legend {
 }
 
 // Ensure btn-outline colors remain the same even if there is no href 
-@each $color, $value in $theme-colors {
+@each $color,
+$value in $theme-colors {
   a.btn-outline-#{$color}:not([href]) {
-    color: $value;   
+    color: $value;
   }
-
   a.btn-outline-#{$color}:not([href]):hover {
-    color: $white;   
+    color: $white;
   }
 }

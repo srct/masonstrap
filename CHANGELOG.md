@@ -12,6 +12,10 @@ and this project adheres to
 
 - Version bump to 4.1.1
 
+### Removed
+
+- Drop support for FA webfonts in support of SVG
+
 ## [4.0] - 2018-02-03
 
 ### Added

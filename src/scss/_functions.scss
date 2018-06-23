@@ -1,11 +1,9 @@
 // Custom functions
-
 // Get a key from the primary-palette map
 @function get-primary-palette($key) {
   @if map-has-key($primary-palette, $key) {
     @return map-get($primary-palette, $key);
   }
-  
   @warn "Unknown `#{$key}` in $primary-palette.";
   @return null;
 }
@@ -15,7 +13,6 @@
   @if map-has-key($universal-palette, $key) {
     @return map-get($universal-palette, $key);
   }
-  
   @warn "Unknown `#{$key}` in $universal-palette.";
   @return null;
 }
@@ -25,7 +22,6 @@
   @if map-has-key($neutral-palette, $key) {
     @return map-get($neutral-palette, $key);
   }
-  
   @warn "Unknown `#{$key}` in $neutral-palette.";
   @return null;
 }

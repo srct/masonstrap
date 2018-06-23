@@ -1,43 +1,10 @@
 // Masonstrap 4.0 Variables
-
-// Global External Packages Settings -------------------------------------------
-$fa-font-path:   "../fonts";
-
 // Global Bootstrap Options Overrides ------------------------------------------
 $enable-shadows: true;
 $enable-gradients: true;
-
 // Mason Branding Colors -------------------------------------------------------
-
-$primary-palette: ( 
-  mason-green: #006633,
-  mason-gold: #FFCC33  
-);
-
-$universal-palette: (
-  dark-turqiose: #00909E,
-  medium-slate-blue: #425195,
-  cardinal-red: #AC1D37,
-  bright-green: #81902B,
-  dark-goldenrod: #9D7F00,
-  tangerine: #F7941E
-);
-
-$neutral-palette: (
-  light-gray: #D1D3D5,
-  exploratory-gray: #A9A0AD,
-  observatory-gray: #87908F,
-  light-taupe-tile: #CCC288,
-  foundation-stone: #A39382,
-  statue-bronze: #A39382,
-  mason-tan: #E4E6D7,
-  southside-glass: #a0c9c1,
-  school-of-art-stone: #D8D8C1
-);
-
+$primary-palette: ( mason-green: #006633, mason-gold: #FFCC33);
+$universal-palette: ( dark-turqiose: #00909E, medium-slate-blue: #425195, cardinal-red: #AC1D37, bright-green: #81902B, dark-goldenrod: #9D7F00, tangerine: #F7941E);
+$neutral-palette: ( light-gray: #D1D3D5, exploratory-gray: #A9A0AD, observatory-gray: #87908F, light-taupe-tile: #CCC288, foundation-stone: #A39382, statue-bronze: #A39382, mason-tan: #E4E6D7, southside-glass: #a0c9c1, school-of-art-stone: #D8D8C1);
 // Bootstrap Color Overrides ---------------------------------------------------
-
-$theme-colors: (
-  primary: get-primary-palette('mason-green'),
-  accent: get-primary-palette('mason-gold'),
-);
+$theme-colors: ( primary: get-primary-palette('mason-green'), accent: get-primary-palette('mason-gold'), );

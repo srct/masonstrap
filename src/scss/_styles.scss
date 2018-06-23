@@ -1,5 +1,4 @@
 // Custom classes and styling
-
 .accent-btn-outline {
     @include button-outline-variant(theme-color('accent'), $gray-900);
 }
