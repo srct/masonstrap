@@ -28,7 +28,7 @@ pages:
 deploy:
   image: python:latest
   script:
-  - pip install awscli
-  - aws s3 cp ./build/ s3://srct/masonstrap/ --recursive
+  - pip install s3cmd 
+  - s3cmd put ./build/ s3://srct/masonstrap/ --recursive --host=nyc3.digitaloceanspaces.com
   only:
   - master
