@@ -29,6 +29,6 @@ deploy:
   image: python:latest
   script:
   - pip install s3cmd 
-  - s3cmd put ./build/ s3://srct/masonstrap/ --recursive --host='nyc3.digitaloceanspaces.com' --host-bucket='%(bucket)s.nyc3.digitaloceanspaces.com' --exclude='*' --include='*.min.*'
+  - s3cmd put ./build/ s3://srct/masonstrap/ --recursive --host='nyc3.digitaloceanspaces.com' --host-bucket='%(bucket)s.nyc3.digitaloceanspaces.com' --exclude='*' --include='*.min.*' --acl-public
   only:
   - master
