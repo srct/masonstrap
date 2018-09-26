@@ -1,11 +1,9 @@
 image: node:latest
 
-before_script:
-  - yarn
-  - npm install -g gulp
-
 build:
   script:
+    - yarn
+    - npm install -g gulp
     - gulp build
   artifacts:
     paths:
@@ -16,6 +14,8 @@ build:
 
 pages:
   script:
+    - yarn
+    - npm install -g gulp
     - gulp build
     - mkdir public
     - mv build/* public
