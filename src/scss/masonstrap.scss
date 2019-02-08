@@ -1,5 +1,5 @@
 /*!
- * Masonstrap 4.1.1
+ * Masonstrap 4.2.1
  *
  * author: Mason SRCT (https://srct.gmu.edu)
  * source code: (https://git.gmu.edu/srct/masonstrap)
@@ -9,9 +9,9 @@
 // Masonstrap custom functions
 @import "_functions";
 // Load in variable overwrites
-@import '_variables';
+@import "_variables";
 // Load in bootstrap 4
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "../../node_modules/bootstrap/scss/bootstrap";
 // Masonstrap custom mixins
 @import "_mixins";
 // Masonstrap custom overwrites
