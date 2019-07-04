@@ -20,9 +20,15 @@
     "gulp-uglify": "^3.0.1",
     "gulp-uglifycss": "^1.1.0",
     "jquery": "latest",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "gulp": "^4.0.0"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
